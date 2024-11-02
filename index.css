@@ -22,7 +22,7 @@ body {
     right: 4%;
     width: 4.5%;
     height: 8%;
-    background-color: rgb(180, 42, 255);
+    /* background-color: rgb(180, 42, 255); */
     z-index: 10000;
     background: url("img/TR\(W\).png") 100%/cover no-repeat;
 }
@@ -43,7 +43,7 @@ body {
     top: 1030px;
     width: 70%;
     height: 500px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
 }
 
 #title01 {
@@ -77,7 +77,7 @@ body {
     top: 1200px;
     width: 59%;
     height: 1250px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
 }
 
 #title02 {
@@ -169,7 +169,7 @@ body {
     top: 1400px;
     width: 76%;
     height: 1250px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
 }
 
 #title03 {
@@ -196,15 +196,15 @@ body {
 
 #L_button01 {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: rgb(146, 140, 133);
 }
 
 #R_button01 {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     right: 0;
     background-color: rgb(146, 140, 133);
 }
@@ -212,7 +212,7 @@ body {
 #d_text01 {
     position: absolute;
     font-size: 25px;
-    top: 1060.5px;
+    top: 1020.5px;
     left: 50%;
     transform: translate(-50%, -50%); /* 위치 조정 */
     z-index: 10000;
@@ -223,7 +223,7 @@ body {
     position: absolute;
     width: 315px;
     height: 80px;
-    top: 1060px;
+    top: 1020px;
     left: 50%;
     transform: translate(-50%, -50%); /* 위치 조정 */
     border-radius: 50px;
@@ -248,7 +248,7 @@ body {
     width: 17%; /* 너비 설정 */
     height: 540px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: #4CAF50; /* 배경색 설정 */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
     margin: 0 8.7px;
     /* clip-path: polygon(0% 0%, 100% 17%, 100% 100%, 0% 83%); /* 사다리꼴 모양 */
 }
@@ -271,7 +271,7 @@ body {
     top: 1550px;
     width: 76%;
     height: 800px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
 }
 
 #img01 {
@@ -322,7 +322,7 @@ body {
     top: 1890px;
     width: 59%;
     height: 1200px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
 }
 
 #title04 {
@@ -342,7 +342,7 @@ body {
     height: 1020px;
     margin-top: 29px;
     z-index: 10000;
-    background-color: rgb(42, 42, 42);
+    /* background-color: rgb(42, 42, 42); */
 }
 
 #kim {
@@ -351,7 +351,7 @@ body {
     width: 40%;
     height: 450px;
     top: 32px;
-    background-color: rgb(87, 64, 64);
+    /* background-color: rgb(65, 65, 65); */
 }
 
 .pro_k {
@@ -362,7 +362,7 @@ body {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     border-radius: 100%;
-    background-color: antiquewhite;
+    background-color: rgb(155, 155, 155);
 }
 
 .name_k {
@@ -379,7 +379,17 @@ body {
     position: relative;
     font-size: 15px;
     text-align: center;
-    top: 65px;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_k2 {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     color: rgb(255, 255, 255);
@@ -391,7 +401,48 @@ body {
     right: 5%;
     height: 450px;
     top: 32px;
-    background-color: rgb(87, 64, 64);
+    /* background-color: rgb(65, 65, 65); */
+}
+
+.pro_n {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    top: 150px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    border-radius: 100%;
+    background-color: rgb(155, 155, 155);
+}
+
+.name_n {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_n {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_n2 {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
 }
 
 #lee {
@@ -400,7 +451,48 @@ body {
     width: 40%;
     height: 450px;
     top: 555px;
-    background-color: rgb(87, 64, 64);
+    /* background-color: rgb(65, 65, 65); */
+}
+
+.pro_l {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    top: 150px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    border-radius: 100%;
+    background-color: rgb(155, 155, 155);
+}
+
+.name_l {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_l {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_l2 {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
 }
 
 #lee2 {
@@ -409,7 +501,48 @@ body {
     width: 40%;
     height: 450px;
     top: 555px;
-    background-color: rgb(87, 64, 64);
+    /* background-color: rgb(65, 65, 65); */
+}
+
+.pro_j {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    top: 150px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    border-radius: 100%;
+    background-color: rgb(155, 155, 155);
+}
+
+.name_j {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_j {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
+
+.text_j2 {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
 }
 
 /* ------ 팀 로고 ------ */
@@ -417,8 +550,19 @@ body {
 #logo {
     position: relative;
     margin: 0 auto;
-    top: 2100px;
+    top: 2000px;
     width: 59%;
     height: 300px;
     background-color: rgb(26, 26, 26);
+}
+
+#text06 {
+    position: relative;
+    font-size: 60px;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
 }
