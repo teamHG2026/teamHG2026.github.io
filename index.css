@@ -27,6 +27,37 @@ body {
     background: url("img/TR\(W\).png") 100%/cover no-repeat;
 }
 
+#menu_d {
+    position: fixed;
+    width: 200px;
+    height: 600px;
+    top: 10.5%;
+    right: 3.84%;
+    z-index: 10000;
+    /* background-color: rgb(26, 26, 26); */
+}
+
+.line01 {
+    position: fixed;
+    width: 9.56%;
+    height: 500px;
+    top: 16%;
+    border-right: 3px solid rgb(255, 255, 255);
+}
+
+#menu_t {
+    position: fixed;
+    width: 120px;
+    height: 500px;
+    font-size: 20px;
+    line-height: 370%;
+    text-align: right;
+    top: 19%;
+    right: 8%;
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(57, 57, 57); */
+}
+
 #box01 {
     position: absolute;
     top: 0;
@@ -54,8 +85,38 @@ body {
     top: 6%;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
     color: rgb(255, 255, 255);
 }
+
+#s_A_line {
+    position: absolute;
+    width: 70%;
+    height: 50px;
+    top: 6.5%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(35, 35, 35); */
+
+}
+
+.s_L_line {
+    position: absolute;
+    width: 37%;
+    top: 50%;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.s_R_line {
+    position: absolute;
+    width: 37%;
+    top: 50%;
+    right: 0;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
 
 #text01 {
     position: absolute;
@@ -88,7 +149,36 @@ body {
     top: 2%;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
     color: rgb(255, 255, 255);
+}
+
+#g_A_line {
+    position: absolute;
+    width: 82%;
+    height: 50px;
+    top: 2%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(35, 35, 35); */
+
+}
+
+.g_L_line {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.g_R_line {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    right: 0;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
 #box02 {
@@ -180,7 +270,36 @@ body {
     top: 2%;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
     color: rgb(255, 255, 255);
+}
+
+#p_A_line {
+    position: absolute;
+    width: 63.5%;
+    height: 50px;
+    top: 2%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(35, 35, 35); */
+
+}
+
+.p_L_line {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.p_R_line {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    right: 0;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
 #A_button01 {
@@ -333,7 +452,36 @@ body {
     top: 2%;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
     color: rgb(255, 255, 255);
+}
+
+#t_A_line {
+    position: absolute;
+    width: 82%;
+    height: 50px;
+    top: 2%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(35, 35, 35); */
+
+}
+
+.t_L_line {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.t_R_line {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    right: 0;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
 #team_P {
