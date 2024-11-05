@@ -58,6 +58,13 @@ body {
     /* background-color: rgb(57, 57, 57); */
 }
 
+#menu_t:link {
+    text-decoration: none;
+}
+#menu_t:hover {
+    text-decoration: none;
+}
+
 #box01 {
     position: absolute;
     top: 0;
@@ -138,7 +145,7 @@ body {
     top: 1200px;
     width: 59%;
     height: 1250px;
-    /* background-color: rgb(26, 26, 26); */
+    background-color: rgb(26, 26, 26);
 }
 
 #title02 {
