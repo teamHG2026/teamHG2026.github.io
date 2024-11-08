@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     margin: 0;
     font-weight: 100;
@@ -143,7 +147,7 @@ a:hover {
     justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
     /* flex-wrap: wrap; */
     width: 66%;
-    margin-top: 650px;
+    margin-top: 660px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
     /* background-color: rgb(64, 87, 66); */
@@ -154,7 +158,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    background-color: rgb(90, 109, 140); /* 배경색 설정 */
     margin: 0 12px;
 }
 
@@ -164,7 +168,7 @@ a:hover {
     justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
     /* flex-wrap: wrap; */
     width: 66%;
-    margin-top: 640px;
+    margin-top: 643px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
     /* background-color: rgb(64, 87, 66); */
@@ -174,12 +178,12 @@ a:hover {
 .n_one_text01 {
     width: 25%; /* 너비 설정 */
     height: 80px; /* 높이 설정 */
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     line-height: 10%; /* 수직 중앙 정렬 */
     color: white;
     /* background-color: rgb(42, 47, 43); */
-    padding-top: 20px;
+    padding-top: 32px;
     margin: 0 12px;
 }
 
@@ -212,7 +216,7 @@ a:hover {
     justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
     /* flex-wrap: wrap; */
     width: 66%;
-    margin-top: 1210px;
+    margin-top: 1230px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
     /* background-color: rgb(64, 87, 66); */
@@ -221,9 +225,34 @@ a:hover {
 
 .n_two_box01 {
     width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
+    height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_two_textA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 1213px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_two_text01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    font-size: 12px;
+    text-align: center;
+    line-height: 10%; /* 수직 중앙 정렬 */
+    color: white;
+    /* background-color: rgb(155, 68, 142); */
+    padding-top: 32px;
     margin: 0 12px;
 }
 
@@ -256,7 +285,7 @@ a:hover {
     justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
     /* flex-wrap: wrap; */
     width: 66%;
-    margin-top: 1770px;
+    margin-top: 1790px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
     /* background-color: rgb(64, 87, 66); */
@@ -265,9 +294,34 @@ a:hover {
 
 .n_three_box01 {
     width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
+    height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_three_textA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 1773px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_three_text01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    font-size: 12px;
+    text-align: center;
+    line-height: 10%; /* 수직 중앙 정렬 */
+    color: white;
+    /* background-color: rgb(155, 68, 142); */
+    padding-top: 32px;
     margin: 0 12px;
 }
 
@@ -300,7 +354,7 @@ a:hover {
     justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
     /* flex-wrap: wrap; */
     width: 66%;
-    margin-top: 2330px;
+    margin-top: 2350px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
     /* background-color: rgb(64, 87, 66); */
@@ -309,9 +363,34 @@ a:hover {
 
 .n_four_box01 {
     width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
+    height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_four_textA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 2333px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_four_text01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    font-size: 12px;
+    text-align: center;
+    line-height: 10%; /* 수직 중앙 정렬 */
+    color: white;
+    /* background-color: rgb(155, 68, 142); */
+    padding-top: 32px;
     margin: 0 12px;
 }
 
@@ -344,7 +423,7 @@ a:hover {
     justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
     /* flex-wrap: wrap; */
     width: 66%;
-    margin-top: 2890px;
+    margin-top: 2910px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
     /* background-color: rgb(64, 87, 66); */
@@ -353,9 +432,34 @@ a:hover {
 
 .n_five_box01 {
     width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
+    height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_five_textA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 2893px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_five_text01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    font-size: 12px;
+    text-align: center;
+    line-height: 10%; /* 수직 중앙 정렬 */
+    color: white;
+    /* background-color: rgb(155, 68, 142); */
+    padding-top: 32px;
     margin: 0 12px;
 }
 
