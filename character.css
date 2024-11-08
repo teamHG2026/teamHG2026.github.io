@@ -1,0 +1,382 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("fonts/Pretendard-Regular.otf") format("opentype");
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 100;
+    height: 3600px;
+    background-color: rgb(0, 0, 0);
+}
+
+a, a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: aqua;
+}
+
+/* ------ 메인 ------ */
+
+#menu {
+    position: fixed;
+    top: 6%;
+    right: 4%;
+    width: 4.5%;
+    height: 8%;
+    /* background-color: rgb(180, 42, 255); */
+    z-index: 10000;
+    background: url("img/TR\(W\).png") 100%/contain no-repeat;
+}
+
+#menu_d {
+    position: fixed;
+    width: 200px;
+    height: 600px;
+    top: 10.5%;
+    right: 3.84%;
+    z-index: 10000;
+    /* background-color: rgb(26, 26, 26); */
+}
+
+.line01 {
+    position: fixed;
+    width: 9.56%;
+    height: 500px;
+    top: 16%;
+    border-right: 3px solid rgb(255, 255, 255);
+}
+
+#menu_t {
+    position: fixed;
+    width: 120px;
+    height: 500px;
+    font-size: 20px;
+    line-height: 370%;
+    text-align: right;
+    top: 19%;
+    right: 8%;
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(57, 57, 57); */
+}
+
+#menu_t:link {
+    text-decoration: none;
+}
+#menu_t:hover {
+    text-decoration: none;
+}
+
+#title01 {
+    position: absolute;
+    font-size: 55px;
+    margin: 0 auto;
+    text-align: center;
+    top: 20%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+}
+
+#s_A_line {
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    top: 20.5%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(35, 35, 35); */
+
+}
+
+.s_L_line {
+    position: absolute;
+    width: 37%;
+    top: 50%;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.s_R_line {
+    position: absolute;
+    width: 37%;
+    top: 50%;
+    right: 0;
+    z-index: 10000;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+/* ------ 1팀 ------ */
+
+#i_one_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 280px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(87, 64, 64); */
+}
+
+
+.i_one_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 440px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_one_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 650px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_one_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 60px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_one_textA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 640px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_one_text01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    font-size: 15px;
+    text-align: center;
+    line-height: 10%; /* 수직 중앙 정렬 */
+    color: white;
+    /* background-color: rgb(42, 47, 43); */
+    padding-top: 20px;
+    margin: 0 12px;
+}
+
+/* ------ 2팀 ------ */
+
+#i_two_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 850px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(87, 64, 64); */
+}
+
+
+.i_two_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 440px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_two_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 1210px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_two_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+/* ------ 3팀 ------ */
+
+#i_three_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 1410px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(87, 64, 64); */
+}
+
+
+.i_three_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 440px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_three_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 1770px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_three_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+/* ------ 4팀 ------ */
+
+#i_four_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 1970px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(87, 64, 64); */
+}
+
+
+.i_four_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 440px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_four_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 2330px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_four_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+/* ------ 5팀 ------ */
+
+#i_five_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 2530px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(87, 64, 64); */
+}
+
+
+.i_five_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 440px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+#n_five_boxA {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /* flex-wrap: wrap; */
+    width: 66%;
+    margin-top: 2890px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 87, 66); */
+}
+
+
+.n_five_box01 {
+    width: 25%; /* 너비 설정 */
+    height: 80px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    background-color: rgb(155, 68, 142); /* 배경색 설정 */
+    margin: 0 12px;
+}
+
+/* ------ 팀 로고 ------ */
+
+#logo {
+    position: relative;
+    margin: 0 auto;
+    top: 3200px;
+    width: 59%;
+    height: 300px;
+    background-color: rgb(26, 26, 26);
+}
+
+#text06 {
+    position: relative;
+    font-size: 60px;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}
