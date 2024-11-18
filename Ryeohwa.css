@@ -82,7 +82,19 @@ a:hover {
     height: 900px;
     /* background-color: rgb(114, 114, 114); */
     background: url("img/려화/려화LD.png") 100%/cover no-repeat;
-    mask-image: linear-gradient(to right rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
+
+    animation: customFadeInDown 1s ease-out; /* 1초 동안 부드럽게 진행 */
+}
+
+@keyframes customFadeInDown {
+    0% {
+        opacity: 0;               /* 시작 시 투명도 0 */
+        transform: translateY(-30px); /* 위에서 내려오게 하기 위해 Y축으로 -30px 이동 */
+    }
+    100% {
+        opacity: 1;               /* 끝날 때 완전하게 나타남 */
+        transform: translateY(0);  /* 원래 위치로 돌아옴 */
+    }
 }
 
 /* ------ 스토리 ------ */

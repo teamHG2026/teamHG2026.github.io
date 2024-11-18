@@ -146,7 +146,12 @@ a:hover {
 .i_one_box01 img {
     max-height: 100%;     /* 높이를 박스에 맞게 조정 */
     object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-  }
+    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
+}
+
+.i_one_box01:hover img {
+    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
+}
 
 #n_one_boxA {
     position: absolute;
@@ -221,7 +226,12 @@ a:hover {
 .i_two_box01 img {
     max-height: 100%;     /* 높이를 박스에 맞게 조정 */
     object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-  }
+    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
+}
+
+.i_two_box01:hover img {
+    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
+}
 
 #n_two_boxA {
     position: absolute;
@@ -296,7 +306,12 @@ a:hover {
 .i_three_box01 img {
     max-height: 100%;     /* 높이를 박스에 맞게 조정 */
     object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-  }
+    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
+}
+
+.i_three_box01:hover img {
+    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
+}
 
 #n_three_boxA {
     position: absolute;

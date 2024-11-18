@@ -6,7 +6,7 @@ $('#logo').on('click', function(){
         $('#menu_t').stop().animate({
             top: 175,
             opacity: 1.0
-        }, 200); // 애니메이션 시간 200 = 0.2초
+        }, 500); // 애니메이션 시간 200 = 0.2초
         setTimeout(function(){
             $('#menu_t > div').each(function(index){
                 $(this).stop().animate({

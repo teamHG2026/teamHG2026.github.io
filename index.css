@@ -37,11 +37,11 @@ a:hover {
     height: 80px;
     /* background-color: rgb(180, 42, 255); */
     z-index: 10000;
-    background: url("img/TR\(W\).png") 100%/contain no-repeat;
+    background: url("img/TR.png") 100%/contain no-repeat;
 }
 
 #menu_t {
-    /* opacity: 0.0; */
+    opacity: 0.0;
     position: fixed;
     width: 130px;
     height: 500px;
@@ -57,9 +57,9 @@ a:hover {
 }
 
 #menu_t > div { /* 메뉴 아이템(#mainmenu>p)은 opacity를 0, left 값을 크게 하여 시작 시 화면에서 보이지 않게 함 */
-    /* opacity: 0.0; */
     position: relative;
-    left: 300px;
+    opacity: 0.0;
+    left: 0px;
 }
 
 #menu_t:link {
