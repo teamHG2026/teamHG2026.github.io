@@ -72,7 +72,7 @@ a:hover {
     position: relative;
     width: 1200px;
     height: 800px;
-    left: 10%;
+    left: 17%;
     /* background-color: rgb(37, 37, 37); */
 }
 
@@ -81,21 +81,8 @@ a:hover {
     width: 1100px;
     height: 900px;
     /* background-color: rgb(114, 114, 114); */
-    background: url("img/려화LD.png") 100%/cover no-repeat;
+    background: url("img/려화/려화LD.png") 100%/cover no-repeat;
     mask-image: linear-gradient(to right rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
-}
-
-#chara_text02 {
-    position: absolute;
-    font-size: 25px;
-    text-align: center;
-    width: 12%;
-    top: 10%;
-    right: 17%;
-    line-height: 160.5%;
-    z-index: 10000;
-    color: white;
-    /* background-color: rgb(26, 26, 26); */
 }
 
 /* ------ 스토리 ------ */
@@ -226,28 +213,6 @@ a:hover {
     background-color: rgb(41, 47, 65);
 }
 
-#d_text01 {
-    position: absolute;
-    font-size: 22px;
-    top: 540.5px;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 위치 조정 */
-    z-index: 10000;
-    color: rgb(255, 255, 255);
-}
-
-#d_button01 {
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    top: 540px;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 위치 조정 */
-    border-radius: 50px;
-    border: 2px solid white; /* 흰색 외각선 */
-    background-color: transparent; /* 내부는 투명 */
-}
-
 /* ------ 팀 소속 ------ */
 
 #chara_team {
@@ -347,6 +312,28 @@ a:hover {
     color: white;
     /* background-color: rgb(41, 47, 65);*/
     margin: 0 20px;
+}
+
+#d_text01 {
+    position: absolute;
+    font-size: 22px;
+    top: 540.5px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+}
+
+#d_button01 {
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    top: 540px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    border-radius: 50px;
+    border: 2px solid white; /* 흰색 외각선 */
+    background-color: transparent; /* 내부는 투명 */
 }
 
 /* ------ 팀 로고 ------ */

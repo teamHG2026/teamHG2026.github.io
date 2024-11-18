@@ -3,28 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css">
     <title>Hwagak</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="index.css">
     
 </head>
 
 <body>
     <div id="main">     <!-- 메인 -->
-        <div id="menu"></div>
-        <div id="menu_d">
-            <div class="line01"></div>
-            <div id="menu_t">
-                <div class="m_story"><a href="#story">세계관</a></div>
-                <div class="m_game"><a href="#gameEX">게임 소개</a></div>
-                <div class="m_chara">
-                    <a href="https://teamhg2026.github.io/character">
-                        캐릭터
-                    </a>
-                </div>
-                <div class="m_event">이벤트</div>
-                <div class="m_item">굿즈샵</div>
-                <div class="m_system">시스템</div>
-            </div>
+        <div id="logo"></div>
+        <div id="menu_t">
+            <div class="m_story"><a href="#story">세계관</a></div>
+            <div class="m_game"><a href="#gameEX">게임 소개</a></div>
+            <div class="m_chara"><a href="https://teamhg2026.github.io/character">캐릭터</a></div>
+            <div class="m_event">이벤트</div>
+            <div class="m_item">굿즈샵</div>
+            <div class="m_system">시스템</div>
         </div>
         <div id="box01"></div>
     </div>
@@ -36,14 +30,16 @@
             <div class="s_R_line"></div>
         </div>
         <div id="text01">
-            <p>어느날 한 마을에서 요괴를 봉인한 구슬이 불안정하며 주위의 산들이 스산해졌다는 서신이 중앙에 도착했다 <br>
-            이 내용을 보고 상황 보고 및 해결 할 수 있으면 해결하라고 근처에 있는 팀에게 전달을 한다 <br>
-            그 서신을 받은 플레이어 그 마을 임무를 해결하기 위해 그 문제의 마을로 떠난다.</p>
-            <br>
-            <p>어느날 한 마을에서 요괴를 봉인한 구슬이 불안정하며 주위의 산들이<br>
-            스산해졌다는 서신이 중앙에 도착했다 <br>
-            이 내용을 보고 상황 보고 및 해결 할 수 있으면 해결하라고 근처에 있는 팀에게 전달을 한다 <br>
-            그 서신을 받은 플레이어 그 마을 임무를 해결하기 <br>
+            <p> 옛날 여러 신들이 모여 하나의 세상을 만들었고<br>
+                다양한 생명들이 그 땅에 살게 되었다 <br>
+                영토를 키우고 싶었던 부족은 서로를 공격하고 <br>동맹을 맺어 대응하기를 반복하였다 <br>
+                많은 존재가 죽거나 다치고, 불안정한 감정이 생겨나며 <br>
+                어느 순간 땅들 중 일부가 끝부분부터 썩어가기 시작하였다 <br>
+                <br>
+                썩은 땅에 닿으면 어느 생물이든 죽어가기 시작하였고 <br>
+                시간이 지나자 썩은 땅에서도 생명이 태어나기 시작하였다 <br>
+                그곳에서 태어난 것들은 본능을 따라 모든 생물을 공격하기 시작했고 <br>
+                상황의 심각성을 깨달은 여러 부족이 힘을 합쳐 그것들을 없애고 땅을 정화하기로 한다
             </p>
         </div>
     </div>
@@ -96,15 +92,19 @@
             <div class="p_R_line"></div>
         </div>
         <div id="A_button01">
-            <div id="L_button01"></div>
-            <div id="R_button01"></div>
+            <div id="L_button01"><img src="img/arrow_left.png"></div>
+            <div id="R_button01"><img src="img/arrow_right.png"></div>
         </div>
         <div id="d_text01"><h3>Details</h3></div>
         <div id="d_button01"></div>
         <div id="pro_boxA">
-            <div class="Pro_box01 clip"></div>
-            <div class="Pro_box01 clip2"></div>
-            <div class="Pro_box01 clip"></div>
+            <div class="Pro_box01 clip">
+                <a href="https://teamHG2026.github.io/Ryeohwa">
+                    <img src="img/려화/소속_려화.png">
+                </a>
+            </div>
+            <div class="Pro_box01 clip2"><img src="img/레비/소속_레비.png"></div>
+            <div class="Pro_box01 clip"><img src="img/알리/소속_알리.png"></div>
             <div class="Pro_box01 clip2"></div>
         </div>
     </div>
@@ -152,9 +152,15 @@
         </div>
     </div>
 
-    <div id="logo">    <!-- 게임 로고 -->
+    <div id="G_logo">    <!-- 게임 로고 -->
         <div id="text06"><h4>TeamHG</h4></div>
     </div>
+
+
+    <!-- js파일 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+
 
 </body>
     

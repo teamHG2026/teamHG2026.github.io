@@ -137,9 +137,16 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 440px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    /* ackground-color: rgb(41, 47, 65); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(36, 60, 36) 100%);
     margin: 0 12px;
+    overflow: hidden;
 }
+
+.i_one_box01 img {
+    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
+    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
+  }
 
 #n_one_boxA {
     position: absolute;
@@ -158,7 +165,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    background-color: rgb(51, 81, 59); /* 배경색 설정 */
     margin: 0 12px;
 }
 
@@ -181,7 +188,7 @@ a:hover {
     font-size: 12px;
     text-align: center;
     line-height: 10%; /* 수직 중앙 정렬 */
-    color: white;
+    color: rgb(255, 255, 255);
     /* background-color: rgb(42, 47, 43); */
     padding-top: 32px;
     margin: 0 12px;
@@ -206,9 +213,15 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 440px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(41, 47, 65) 100%);
     margin: 0 12px;
+    overflow: hidden;
 }
+
+.i_two_box01 img {
+    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
+    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
+  }
 
 #n_two_boxA {
     position: absolute;
@@ -275,9 +288,15 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 440px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(110, 96, 52) 100%);
     margin: 0 12px;
+    overflow: hidden;
 }
+
+.i_three_box01 img {
+    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
+    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
+  }
 
 #n_three_boxA {
     position: absolute;
@@ -296,7 +315,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    background-color: rgb(155, 137, 64); /* 배경색 설정 */
     margin: 0 12px;
 }
 
@@ -344,7 +363,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 440px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(87, 87, 87) 100%);
     margin: 0 12px;
 }
 
@@ -365,7 +384,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    background-color: rgb(128, 128, 128); /* 배경색 설정 */
     margin: 0 12px;
 }
 
@@ -413,7 +432,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 440px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(55, 41, 65) 100%);
     margin: 0 12px;
 }
 
@@ -434,7 +453,7 @@ a:hover {
     width: 25%; /* 너비 설정 */
     height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(90, 109, 140); /* 배경색 설정 */
+    background-color: rgb(123, 90, 140); /* 배경색 설정 */
     margin: 0 12px;
 }
 
