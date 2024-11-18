@@ -37,7 +37,7 @@ a:hover {
     height: 8%;
     /* background-color: rgb(180, 42, 255); */
     z-index: 10000;
-    background: url("img/TR\(W\).png") 100%/contain no-repeat;
+    background: url("img/TR.png") 100%/contain no-repeat;
 }
 
 #menu_d {
