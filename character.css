@@ -171,7 +171,7 @@ a:hover {
     height: 60px; /* 높이 설정 */
     line-height: 10%; /* 수직 중앙 정렬 */
     background-color: rgb(51, 81, 59); /* 배경색 설정 */
-    margin: 0 12px;
+    margin: 0 10px;
 }
 
 #n_one_textA {
@@ -449,6 +449,17 @@ a:hover {
     line-height: 10%; /* 수직 중앙 정렬 */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(55, 41, 65) 100%);
     margin: 0 12px;
+    overflow: hidden;
+}
+
+.i_five_box01 img {
+    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
+    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
+    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
+}
+
+.i_five_box01:hover img {
+    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
 }
 
 #n_five_boxA {

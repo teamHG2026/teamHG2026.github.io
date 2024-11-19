@@ -47,9 +47,10 @@ a:hover {
     height: 500px;
     font-size: 20px;
     line-height: 370%;
-    text-align: left;
+    text-align: right;
     top: -500px;
     right: 105px;
+    padding-right: 35px;
     color: rgb(255, 255, 255);
     z-index: 10000;
     /* background-color: rgb(57, 57, 57); */

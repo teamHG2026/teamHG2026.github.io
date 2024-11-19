@@ -2,6 +2,7 @@ let menuOn = false; // 메뉴가 오픈 상태인지를 확인하기 위한 변�
 
 // 로고(#logo)를 클릭하면 애니메이션이 실행됨
 $('#logo').on('click', function(){
+    console.log("ok");
     if(!menuOn) {
         $('#menu_t').stop().animate({
             top: 175,
