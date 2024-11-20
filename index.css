@@ -394,7 +394,10 @@ a:hover {
     background-color: rgb(41, 47, 65); /* 배경색 설정 */
     margin: 0 8.7px;
     overflow: hidden;
-    /* clip-path: polygon(0% 0%, 100% 17%, 100% 100%, 0% 83%); /* 사다리꼴 모양 */
+
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(100px); /* 아래에서 100px 떨어져서 나타남 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
 }
 
 .Pro_box01 img {
@@ -410,6 +413,12 @@ a:hover {
     margin-top: 10%;
     clip-path: polygon(0% 0%, 100% 17%, 100% 100%, 0% 83%); /* 사다리꼴 모양 */
     transform: scaleX(-1); /* 좌우 반전 */
+}
+
+/* 스크롤 이벤트에 따라 변하는 스타일 */
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* 원래 자리로 돌아옴 */
 }
 
 /* ------ 플레이 사진 ------ */

@@ -34,3 +34,17 @@ $('#logo').on('click', function(){
         }, 100);
     }
 });
+
+
+window.addEventListener('scroll', function() {
+    var boxes = document.querySelectorAll('.Pro_box01'); // 모든 Pro_box01 요소
+    var windowHeight = window.innerHeight; // 윈도우 높이
+    var scrollY = window.scrollY; // 현재 스크롤 위치
+
+    boxes.forEach(function(box) {
+        var boxTop = box.getBoundingClientRect().top + scrollY; // 요소의 실제 상단 위치
+        if (scrollY + windowHeight > boxTop + 100) { // 100px 위에서 나타나도록
+            box.classList.add('visible'); // visible 클래스를 추가하여 애니메이션 실행
+        }
+    });
+});
