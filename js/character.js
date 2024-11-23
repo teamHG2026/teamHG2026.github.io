@@ -35,17 +35,28 @@ $('#logo').on('click', function(){
     }
 });
 
+// 하늘비 이미지 애니메이션
 
-window.addEventListener('scroll', function() {
-    var boxes = document.querySelectorAll('.Pro_box01'); // 모든 Pro_box01 요소
-    var windowHeight = window.innerHeight; // 윈도우 높이
-    var scrollY = window.scrollY; // 현재 스크롤 위치
+document.querySelector('.clip2').addEventListener('mouseenter', function() {
+    var img = this.querySelector('a img');
+    var newImage = "img/하늘비/chara_하늘비 (성체).png";
 
-    boxes.forEach(function(box) {
-        var boxTop = box.getBoundingClientRect().top + scrollY; // 요소의 실제 상단 위치
-        if (scrollY + windowHeight > boxTop + 100) { // 100px 위에서 나타나도록
-            box.classList.add('visible'); // visible 클래스를 추가하여 애니메이션 실행
-        }
-    });
+    img.classList.add('hidden');
+    setTimeout(function() {
+        img.src = newImage;
+        img.classList.remove('hidden');
+        img.classList.add('visible');
+    }, 300); // 300ms 후 이미지 변경
 });
 
+document.querySelector('.clip2').addEventListener('mouseleave', function() {
+    var img = this.querySelector('a img');
+    var originalImage = "img/하늘비/chara_하늘비 (아기).png";
+
+    img.classList.add('hidden');
+    setTimeout(function() {
+        img.src = originalImage;
+        img.classList.remove('hidden');
+        img.classList.add('visible');
+    }, 300); // 300ms 후 원래 이미지 변경
+});

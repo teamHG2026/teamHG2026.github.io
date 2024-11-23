@@ -5,6 +5,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -14,7 +16,6 @@ html {
 body {
     margin: 0;
     font-weight: 100;
-    height: 3600px;
     background-color: rgb(0, 0, 0);
 }
 
@@ -27,48 +28,192 @@ a:hover {
     color: aqua;
 }
 
-/* ------ 메인 ------ */
 
-#menu {
+
+/* 메인 - 메인 레이어에 페이지 타이틀, 콘텐츠(팀원 카드), 로고를 차례로 이어가는 구조. 
+    position을 relative로 설정해야 하나의 레이어에 배치되어서 자동으로 정렬됨 */
+#main-container {
+    position: relative;
+    width: 65%;
+    /*height: 2000px;*/
+    margin: 0 auto;
+    /*background-color: aquamarine;*/
+}
+
+#chara_title_box {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: 120px;
+    margin-bottom: 130px;
+    background-color: rgb(92, 79, 79);
+}
+
+
+#chara_title01 {
+    position: absolute;
+    font-size: 55px;
+    text-align: center;
+    width: 190px;
+    top: 32px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+    z-index: 10000;
+    background-color: rgb(91, 66, 37);
+}
+
+#chara_line {
+    position: absolute;
+    width: 82%;
+    height: 37px;
+    top: 86px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    background-color: rgb(35, 35, 35);
+    border-top: 1.5px solid rgb(255, 255, 255);
+}
+
+/* 팀원 카드는 CSS CLASS로 동일하게 관리 */
+.team-container {
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 48px;
+    display: flex;
+    gap: 24px;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    /*background-color: rgb(87, 64, 64);*/
+}
+.member-card {
+    flex-basis: 25%;
+    background-color: transparent;
+}
+.card-image:hover img {
+    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
+}
+
+.card-image {
+    width: 100%;
+    overflow: hidden;
+}
+.card-image img {
+    display: block;
+    width: 100%;
+    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
+}
+.card-name {
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    background-color: rgb(181, 181, 181);
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.clip:hover img {
+    transform: scale(1.0);     /* 이미지 크기를 1.1배로 확대 */
+}
+
+.card-image img.hidden {
+    opacity: 0; /* 이미지가 숨겨짐 */
+}
+
+.card-image img.visible {
+    opacity: 1; /* 이미지가 보임 */
+}
+
+/* 팀별 고유 색상은 CSS ID로 지정 */
+#team-1 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(36, 60, 36) 100%);
+}
+/* #team-1 .card-name {
+    background-color: rgb(181, 181, 181);
+} */
+#team-2 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(47, 56, 82) 100%);
+}
+#team-3 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(110, 96, 52) 100%);
+}
+#team-4 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(87, 87, 87) 100%);
+}
+#team-5 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(55, 41, 65) 100%);
+}
+/* .clip2에 마우스를 올렸을 때 이미지 확대 */
+.clip2:hover img {
+    transform: scale(1.2); /* 이미지 크기 확대 */
+    transition: transform 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+/* card-name에 마우스를 올렸을 때 이미지 확대가 적용되지 않도록 조정 */
+.card-name:hover {
+    transform: none; /* card-name hover 효과가 이미지에 영향을 미치지 않게 */
+}
+
+
+
+/* ------ 팀 로고 ------ */
+
+#team {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 300px;
+    margin-bottom: 70px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(26, 26, 26);
+}
+#team > p {
+    position: relative;
+    top: 50%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    margin: 0 auto;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* ------ 메뉴 ------ */
+
+#logo {
     position: fixed;
     top: 6%;
     right: 4%;
-    width: 4.5%;
-    height: 8%;
+    width: 80px;
+    height: 80px;
     /* background-color: rgb(180, 42, 255); */
     z-index: 10000;
     background: url("img/TR.png") 100%/contain no-repeat;
 }
 
-#menu_d {
-    position: fixed;
-    width: 200px;
-    height: 600px;
-    top: 10.5%;
-    right: 3.84%;
-    z-index: 10000;
-    /* background-color: rgb(26, 26, 26); */
-}
-
-.line01 {
-    position: fixed;
-    width: 9.56%;
-    height: 500px;
-    top: 16%;
-    border-right: 3px solid rgb(255, 255, 255);
-}
-
 #menu_t {
+    opacity: 0.0;
     position: fixed;
-    width: 120px;
+    width: 130px;
     height: 500px;
     font-size: 20px;
     line-height: 370%;
     text-align: right;
-    top: 19%;
-    right: 8%;
+    top: -500px;
+    right: 105px;
+    padding-right: 35px;
     color: rgb(255, 255, 255);
+    z-index: 10000;
     /* background-color: rgb(57, 57, 57); */
+    border-right: 3px solid rgb(255, 255, 255);
+}
+
+#menu_t > div { /* 메뉴 아이템(#mainmenu>p)은 opacity를 0, left 값을 크게 하여 시작 시 화면에서 보이지 않게 함 */
+    position: relative;
+    opacity: 0.0;
+    left: 0px;
 }
 
 #menu_t:link {
@@ -78,454 +223,5 @@ a:hover {
     text-decoration: none;
 }
 
-#title01 {
-    position: absolute;
-    font-size: 55px;
-    margin: 0 auto;
-    text-align: center;
-    top: 20%;
-    left: 50%; /* 가로 중앙 */
-    transform: translate(-50%, -50%); /* 위치 조정 */
-    z-index: 10000;
-    color: rgb(255, 255, 255);
-}
 
-#s_A_line {
-    position: absolute;
-    width: 50%;
-    height: 50px;
-    top: 20.5%;
-    left: 50%; /* 가로 중앙 */
-    transform: translate(-50%, -50%); /* 위치 조정 */
-    /* background-color: rgb(35, 35, 35); */
 
-}
-
-.s_L_line {
-    position: absolute;
-    width: 37%;
-    top: 50%;
-    z-index: 10000;
-    border-top: 1px solid rgb(255, 255, 255);
-}
-
-.s_R_line {
-    position: absolute;
-    width: 37%;
-    top: 50%;
-    right: 0;
-    z-index: 10000;
-    border-top: 1px solid rgb(255, 255, 255);
-}
-
-/* ------ 1팀 ------ */
-
-#i_one_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 280px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(87, 64, 64); */
-}
-
-
-.i_one_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 440px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    /* ackground-color: rgb(41, 47, 65); */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(36, 60, 36) 100%);
-    margin: 0 12px;
-    overflow: hidden;
-}
-
-.i_one_box01 img {
-    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
-    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
-}
-
-.i_one_box01:hover img {
-    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
-}
-
-#n_one_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 660px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_one_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(51, 81, 59); /* 배경색 설정 */
-    margin: 0 12px;
-}
-
-#n_one_textA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 643px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_one_text01 {
-    width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
-    font-size: 12px;
-    text-align: center;
-    line-height: 10%; /* 수직 중앙 정렬 */
-    color: rgb(255, 255, 255);
-    /* background-color: rgb(42, 47, 43); */
-    padding-top: 32px;
-    margin: 0 12px;
-}
-
-/* ------ 2팀 ------ */
-
-#i_two_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 850px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(87, 64, 64); */
-}
-
-
-.i_two_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 440px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(41, 47, 65) 100%);
-    margin: 0 12px;
-    overflow: hidden;
-}
-
-.i_two_box01 img {
-    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
-    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
-}
-
-.i_two_box01:hover img {
-    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
-}
-
-#n_two_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 1230px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_two_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(90, 109, 140); /* 배경색 설정 */
-    margin: 0 12px;
-}
-
-#n_two_textA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 1213px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_two_text01 {
-    width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
-    font-size: 12px;
-    text-align: center;
-    line-height: 10%; /* 수직 중앙 정렬 */
-    color: white;
-    /* background-color: rgb(155, 68, 142); */
-    padding-top: 32px;
-    margin: 0 12px;
-}
-
-/* ------ 3팀 ------ */
-
-#i_three_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 1410px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(87, 64, 64); */
-}
-
-
-.i_three_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 440px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(110, 96, 52) 100%);
-    margin: 0 12px;
-    overflow: hidden;
-}
-
-.i_three_box01 img {
-    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
-    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
-}
-
-.i_three_box01:hover img {
-    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
-}
-
-#n_three_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 1790px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_three_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(155, 137, 64); /* 배경색 설정 */
-    margin: 0 12px;
-}
-
-#n_three_textA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 1773px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_three_text01 {
-    width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
-    font-size: 12px;
-    text-align: center;
-    line-height: 10%; /* 수직 중앙 정렬 */
-    color: white;
-    /* background-color: rgb(155, 68, 142); */
-    padding-top: 32px;
-    margin: 0 12px;
-}
-
-/* ------ 4팀 ------ */
-
-#i_four_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 1970px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(87, 64, 64); */
-}
-
-
-.i_four_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 440px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(87, 87, 87) 100%);
-    margin: 0 12px;
-}
-
-#n_four_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 2350px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_four_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(128, 128, 128); /* 배경색 설정 */
-    margin: 0 12px;
-}
-
-#n_four_textA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 2333px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_four_text01 {
-    width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
-    font-size: 12px;
-    text-align: center;
-    line-height: 10%; /* 수직 중앙 정렬 */
-    color: white;
-    /* background-color: rgb(155, 68, 142); */
-    padding-top: 32px;
-    margin: 0 12px;
-}
-
-/* ------ 5팀 ------ */
-
-#i_five_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 2530px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(87, 64, 64); */
-}
-
-
-.i_five_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 440px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(55, 41, 65) 100%);
-    margin: 0 12px;
-    overflow: hidden;
-}
-
-.i_five_box01 img {
-    max-height: 100%;     /* 높이를 박스에 맞게 조정 */
-    object-fit: cover;    /* 이미지 비율을 유지하면서 박스에 맞게 크기를 조정 */
-    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
-}
-
-.i_five_box01:hover img {
-    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
-}
-
-#n_five_boxA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 2910px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_five_box01 {
-    width: 25%; /* 너비 설정 */
-    height: 60px; /* 높이 설정 */
-    line-height: 10%; /* 수직 중앙 정렬 */
-    background-color: rgb(123, 90, 140); /* 배경색 설정 */
-    margin: 0 12px;
-}
-
-#n_five_textA {
-    position: absolute;
-    display: flex;
-    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-    /* flex-wrap: wrap; */
-    width: 66%;
-    margin-top: 2893px;
-    margin-left: 50%;
-    transform: translate(-50%, 0%); /* 위치 조정 */
-    /* background-color: rgb(64, 87, 66); */
-}
-
-
-.n_five_text01 {
-    width: 25%; /* 너비 설정 */
-    height: 80px; /* 높이 설정 */
-    font-size: 12px;
-    text-align: center;
-    line-height: 10%; /* 수직 중앙 정렬 */
-    color: white;
-    /* background-color: rgb(155, 68, 142); */
-    padding-top: 32px;
-    margin: 0 12px;
-}
-
-/* ------ 팀 로고 ------ */
-
-#logo {
-    position: relative;
-    margin: 0 auto;
-    top: 3200px;
-    width: 59%;
-    height: 300px;
-    background-color: rgb(26, 26, 26);
-}
-
-#text06 {
-    position: relative;
-    font-size: 60px;
-    margin: 0 auto;
-    text-align: center;
-    top: 50%;
-    left: 50%; /* 가로 중앙 */
-    transform: translate(-50%, -50%); /* 위치 조정 */
-    color: rgb(255, 255, 255);
-}
