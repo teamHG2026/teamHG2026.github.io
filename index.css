@@ -24,7 +24,7 @@ a, a:hover, a:link, a:visited {
 }
 
 a:hover {
-    color: aqua;
+    color: rgb(71, 165, 76);
 }
 
 /* ------ 메인 ------ */
@@ -71,12 +71,24 @@ a:hover {
     text-decoration: none;
 }
 
+.m_event {
+    text-decoration: line-through;
+}
+
+.m_item {
+    text-decoration: line-through;
+}
+
+.m_system {
+    text-decoration: line-through;
+}
+
 #box01 {
     position: relative;
     padding-top: 0px;
     width: 100%;
     height: 800px;
-    background-color: rgb(151, 115, 115);
+    background-color: rgb(98, 128, 136);
 }
 
 #button_up {
@@ -736,6 +748,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     color: rgb(255, 255, 255);
+    text-decoration: line-through;
 }
 
 #no {
@@ -786,6 +799,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     color: rgb(255, 255, 255);
+    text-decoration: line-through;
 }
 
 #lee {
@@ -836,6 +850,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     color: rgb(255, 255, 255);
+    text-decoration: line-through;
 }
 
 #lee2 {
@@ -886,6 +901,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     color: rgb(255, 255, 255);
+    text-decoration: line-through;
 }
 
 /* ------ 팀 로고 ------ */

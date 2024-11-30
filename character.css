@@ -237,5 +237,17 @@ a:hover {
     text-decoration: none;
 }
 
+.m_event {
+    text-decoration: line-through;
+}
+
+.m_item {
+    text-decoration: line-through;
+}
+
+.m_system {
+    text-decoration: line-through;
+}
+
 
 
