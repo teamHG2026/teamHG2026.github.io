@@ -149,19 +149,101 @@ window.addEventListener('scroll', function() {
     });
 });
 
-//팀 소속 애니메이션
+// 팀 소속 애니메이션
+window.addEventListener('scroll', triggerScrollAnimation);
 
-window.addEventListener('scroll', function() {
-    var boxes = document.querySelectorAll('.Pro_box01'); // 모든 Pro_box01 요소
-    var windowHeight = window.innerHeight; // 윈도우 높이
-    var scrollY = window.scrollY; // 현재 스크롤 위치
+function triggerScrollAnimation() {
+    const boxes = document.querySelectorAll('.Pro_box01'); // 모든 Pro_box01 요소
+    const windowHeight = window.innerHeight; // 윈도우 높이
 
-    boxes.forEach(function(box) {
-        var boxTop = box.getBoundingClientRect().top + scrollY; // 요소의 실제 상단 위치
-        if (scrollY + windowHeight > boxTop + 100) { // 100px 위에서 나타나도록
+    boxes.forEach(function (box) {
+        const boxTop = box.getBoundingClientRect().top; // 화면 기준의 상단 위치
+        if (boxTop < windowHeight - 100) { // 100px 이전에 나타나도록 조건 수정
             box.classList.add('visible'); // visible 클래스를 추가하여 애니메이션 실행
+        } else {
+            box.classList.remove('visible'); // 화면 밖에 있으면 visible 클래스를 제거
         }
     });
+}
+
+// 팀 소속 슬라이드쇼
+$(function () {
+    let currentIndex = 0; // 현재 슬라이드 인덱스
+    const slideImages = [
+        [
+            'img/려화/소속_려화.png',
+            'img/실루엣/소속/소속_소운.png',
+            'img/실루엣/소속/소속_도월.png',
+            'img/실루엣/소속/소속_연이.png',
+        ],
+        [
+            'img/레비/소속_레비.png',
+            'img/실루엣/소속/소속_망나니.png',
+            'img/실루엣/소속/소속_서화.png',
+            'img/실루엣/소속/소속_앨리스.png',
+        ],
+        [
+            'img/알리/소속_알리.png',
+            'img/실루엣/소속/소속_해태.png',
+            'img/실루엣/소속/소속_사린.png',
+            'img/실루엣/소속/소속_해랑.png',
+        ],
+        [
+            'img/화월/소속_화월.png',
+            'img/실루엣/소속/소속_비.png',
+            'img/실루엣/소속/소속_소르귀.png',
+            'img/실루엣/소속/소속_쥐돌이.png',
+        ],
+        [
+            'img/하늘비/소속_하늘비 (아기).png',
+            'img/실루엣/소속/소속_마야.png',
+            'img/실루엣/소속/소속_이류.png',
+            'img/실루엣/소속/소속_주지탈.png',
+        ],
+    ]; // 슬라이드마다 보여줄 이미지 세트
+
+    const $slides = $('.Pro_box01 img'); // 슬라이드 내부 이미지
+    const totalSlides = slideImages.length; // 슬라이드 세트 개수
+
+    function updateSlides() {
+        // 이미지 업데이트
+        const images = slideImages[currentIndex];
+        $slides.each(function (index) {
+            $(this).attr('src', images[index]); // 이미지 src 변경
+        });
+
+        // 애니메이션 초기화: 'visible' 클래스 제거
+        const boxes = document.querySelectorAll('.Pro_box01');
+        boxes.forEach((box) => {
+            box.classList.remove('visible'); // 'visible' 클래스를 제거하여 애니메이션 초기화
+            box.style.transition = 'none'; // transition 초기화 (애니메이션 끊김 방지)
+        });
+
+        // 강제로 현재 스크롤 상태에서 애니메이션을 다시 적용
+        setTimeout(function() {
+            // transition 속성 다시 추가하여 애니메이션을 활성화
+            boxes.forEach((box) => {
+                box.style.transition = 'opacity 1s ease, transform 1s ease'; // 애니메이션 재활성화
+            });
+
+            triggerScrollAnimation(); // 애니메이션 실행
+        }, 50); // 50ms 후 애니메이션 시작
+    }
+
+    // 왼쪽 버튼 클릭
+    $('#btn-left').on('click', function () {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : totalSlides - 1; // 이전 슬라이드로
+        updateSlides();
+    });
+
+    // 오른쪽 버튼 클릭
+    $('#btn-right').on('click', function () {
+        currentIndex = currentIndex < totalSlides - 1 ? currentIndex + 1 : 0; // 다음 슬라이드로
+        updateSlides();
+    });
+
+    // 초기화: 첫 슬라이드 이미지 적용
+    updateSlides();
 });
 
 //게임 설명 애니메이션
@@ -244,4 +326,74 @@ window.addEventListener('scroll', function() {
             box.classList.add('visible'); // visible 클래스를 추가하여 애니메이션 실행
         }
     });
+});
+
+//플레이 화면 애니메이션 (슬라이드쇼)
+
+$(function() {
+    const images = [
+        'img/실루엣/소속/소속_망나니.png',   // 첫 번째 이미지
+        'img/실루엣/소속/소속_해랑.png',   // 두 번째 이미지
+        'img/실루엣/소속/소속_사린.png',   // 세 번째 이미지
+    ]; // 사용할 이미지들
+
+    let currentIndex = 0; // 현재 표시된 이미지 인덱스
+    let isDragging = false; // 마우스를 드래그 중인지 여부
+    let startX = 0; // 드래그 시작 X 좌표
+    let moveDistance = 0; // 이동 거리
+
+    // 마우스 클릭 시 드래그 시작
+    $('#gameIMG').on('mousedown', function(event) {
+        isDragging = true; // 드래그 시작
+        startX = event.pageX; // 마우스의 현재 X 좌표
+        moveDistance = 0; // 이동 거리 초기화
+    });
+
+    // 마우스를 움직일 때 (드래그 중일 때만)
+    $('#gameIMG').on('mousemove', function(event) {
+        if (!isDragging) return; // 드래그 중이 아니면 종료
+
+        moveDistance = event.pageX - startX; // 마우스 이동 거리 계산
+
+        // 100px 이상 드래그 시에만 이미지 변경
+        if (moveDistance > 100) {  // 오른쪽으로 100px 이상 이동했을 때
+            changeImage('next');
+            startX = event.pageX; // 새로운 시작 X 좌표로 갱신
+            moveDistance = 0; // 이동 거리 리셋
+        } else if (moveDistance < -100) { // 왼쪽으로 100px 이상 이동했을 때
+            changeImage('prev');
+            startX = event.pageX; // 새로운 시작 X 좌표로 갱신
+            moveDistance = 0; // 이동 거리 리셋
+        }
+    });
+
+    // 마우스 버튼을 떼면 드래그 종료
+    $('#gameIMG').on('mouseup', function() {
+        if (!isDragging) return;
+        isDragging = false; // 드래그 종료
+        moveDistance = 0; // 이동 거리 초기화
+    });
+
+    // 마우스가 게임 이미지 밖으로 나가면 드래그 종료
+    $('#gameIMG').on('mouseleave', function() {
+        if (!isDragging) return;
+        isDragging = false; // 드래그 종료
+        moveDistance = 0; // 이동 거리 초기화
+    });
+
+    // 이미지 변경 함수
+    function changeImage(direction) {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % images.length; // 다음 이미지로 이동
+        } else if (direction === 'prev') {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // 이전 이미지로 이동
+        }
+        $('#img01 img').attr('src', images[currentIndex]); // 이미지 변경
+    }
+
+    // 처음 페이지가 로드될 때 첫 이미지 세팅
+    $('#img01 img').attr('src', images[currentIndex]);
+
+    // visible 클래스를 추가하여 처음부터 애니메이션 실행
+    $('#gameIMG').addClass('visible');
 });

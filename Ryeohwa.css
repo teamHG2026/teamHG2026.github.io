@@ -299,7 +299,7 @@ a:hover {
     font-size: 55px;
     margin: 0 auto;
     text-align: center;
-    width: 25%;
+    width: 30%;
     top: 65px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
