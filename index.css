@@ -48,13 +48,14 @@ a:hover {
     font-size: 20px;
     line-height: 370%;
     text-align: right;
-    top: -500px;
+    top: 175px; /* 메뉴 상단 위치 */
     right: 105px;
     padding-right: 35px;
     color: rgb(255, 255, 255);
     z-index: 10000;
     /* background-color: rgb(57, 57, 57); */
     border-right: 3px solid rgb(255, 255, 255);
+    overflow: hidden; /* 메뉴 아이템이 영역을 벗어나는 경우 보이지 않게 함 */
 }
 
 #menu_t > div { /* 메뉴 아이템(#mainmenu>p)은 opacity를 0, left 값을 크게 하여 시작 시 화면에서 보이지 않게 함 */
@@ -80,8 +81,11 @@ a:hover {
 
 #button_up {
     position: fixed;
-    bottom: 40px;
-    left: 35px;
+    bottom: 55px;
+    left: 45px;
+
+    opacity: 0; /* 처음에는 버튼이 보이지 않도록 설정 */
+    transition: opacity 1s ease; /* opacity 애니메이션 */
 }
 
 /* ------ 세계관 ------ */
@@ -93,14 +97,22 @@ a:hover {
     width: 100%; /* 화면 너비에 맞게 100%로 설정 */
     max-width: 1200px; /* 최대 너비를 설정 (필요에 따라 조정) */
     height: 630px;
-    background-color: rgb(26, 26, 26);
+    /*background-color: rgb(26, 26, 26); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#story.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #s_title_box {
     position: relative;
     width: 100%;
     height: 195px;
-    background-color: rgb(95, 130, 118);
+    /* background-color: rgb(95, 130, 118); */
 }
 
 #title01 {
@@ -114,7 +126,7 @@ a:hover {
     transform: translate(-50%, -50%); /* 위치 조정 */
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
 }
 
 #s_line {
@@ -124,7 +136,7 @@ a:hover {
     top: 113px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    background-color: rgb(151, 83, 83);
+    /* background-color: rgb(151, 83, 83); */
     border-top: 1.5px solid rgb(255, 255, 255);
 }
 
@@ -132,7 +144,7 @@ a:hover {
     position: relative;
     width: 100%;
     height: 430px;
-    background-color: rgb(113, 107, 99);
+    /* background-color: rgb(113, 107, 99); */
 }
 
 #text01 {
@@ -148,6 +160,12 @@ a:hover {
     /* background-color: antiquewhite; */
 }
 
+/* 스크롤 이벤트에 따라 변하는 스타일 */
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* 원래 자리로 돌아옴 */
+}
+
 /* ------ 게임 설명 ------ */
 
 #gameEX {
@@ -157,14 +175,22 @@ a:hover {
     width: 59%; /* 가로 크기를 더 적게 설정 */
     max-width: 1200px; /* 최대 가로 크기 지정 (예: 1200px로 설정) */
     height: 1220px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#gameEX.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #g_title_box {
     position: relative;
     width: 100%;
     height: 170px;
-    background-color: rgb(95, 130, 118);
+    /* background-color: rgb(95, 130, 118); */
 }
 
 #title02 {
@@ -178,7 +204,7 @@ a:hover {
     transform: translate(-50%, -50%); /* 위치 조정 */
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
 }
 
 #g_line {
@@ -188,7 +214,7 @@ a:hover {
     top: 103.5px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    background-color: rgb(35, 35, 35);
+    /* background-color: rgb(35, 35, 35); */
     border-top: 1.5px solid rgb(255, 255, 255);
 }
 
@@ -196,7 +222,7 @@ a:hover {
     position: relative;
     width: 100%;
     height: 350px;
-    background-color: rgb(54, 97, 97);
+    /* background-color: rgb(54, 97, 97); */
 }
 
 
@@ -206,7 +232,18 @@ a:hover {
     width: 460px;
     height: 280px;
     background-color: rgb(41, 47, 65);
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateX(-100px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+
+    transition-delay: 0s; /* 첫 번째 박스는 바로 애니메이션 시작 */
 }
+
+#box02.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateX(0); /* 요소가 원래 위치로 올라옴 */
+}
+
 
 #text02 {
     position: absolute;
@@ -217,7 +254,17 @@ a:hover {
     left: 535px;
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: rgb(63, 58, 51);
+    /* background-color: rgb(63, 58, 51); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateX(100px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+
+    transition-delay: 0s; /* 첫 번째 박스는 바로 애니메이션 시작 */
+}
+
+#text02.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 .text002 {
@@ -228,7 +275,7 @@ a:hover {
     position: relative;
     width: 100%;
     height: 350px;
-    background-color: rgb(55, 95, 68);
+    /* background-color: rgb(55, 95, 68); */
 }
 
 #box03 {
@@ -238,6 +285,16 @@ a:hover {
     width: 460px;
     height: 280px;
     background-color: rgb(41, 47, 65);
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateX(100px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+
+    transition-delay: 0.5s; /* 첫 번째 박스는 바로 애니메이션 시작 */
+}
+
+#box03.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #text03 {
@@ -249,7 +306,17 @@ a:hover {
     left: 80px;
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: rgb(84, 47, 47);
+    /* background-color: rgb(84, 47, 47); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateX(-100px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+
+    transition-delay: 0.5s; /* 첫 번째 박스는 바로 애니메이션 시작 */
+}
+
+#text03.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 .text003 {
@@ -260,7 +327,7 @@ a:hover {
     position: relative;
     width: 100%;
     height: 350px;
-    background-color: rgb(54, 97, 97);
+    /* background-color: rgb(54, 97, 97); */
 }
 
 #box04 {
@@ -269,6 +336,24 @@ a:hover {
     width: 460px;
     height: 280px;
     background-color: rgb(41, 47, 65);
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateX(-100px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+
+    transition-delay: 1s; /* 첫 번째 박스는 바로 애니메이션 시작 */
+    overflow: hidden;
+}
+
+.box04 img {
+    width: 100%;  /* 부모 박스에 맞게 너비를 조정 */
+    height: 100%; /* 부모 박스에 맞게 높이를 조정 */
+    object-fit: contain; /* 이미지가 비율을 유지하면서 박스 안에 맞게 들어가도록 설정 */
+    object-position: center; /* 이미지가 잘리지 않게 중앙으로 위치 */
+}
+
+#box04.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #text04 {
@@ -280,7 +365,17 @@ a:hover {
     left: 535px;
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: rgb(82, 74, 64);
+    /* background-color: rgb(82, 74, 64); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateX(100px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+
+    transition-delay: 1s; /* 첫 번째 박스는 바로 애니메이션 시작 */
+}
+
+#text04.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 .text004 {
@@ -295,14 +390,22 @@ a:hover {
     margin-top: 300px;
     width: 59%;
     height: 1100px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#profile.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #p_title_box {
     position: relative;
     width: 100%;
     height: 170px;
-    background-color: rgb(95, 130, 118);
+    /* background-color: rgb(95, 130, 118); */
 }
 
 #title03 {
@@ -316,7 +419,7 @@ a:hover {
     transform: translate(-50%, -50%); /* 위치 조정 */
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: rgb(75, 75, 51);
+    background-color: rgb(0, 0, 0);
 }
 
 #p_line {
@@ -326,7 +429,7 @@ a:hover {
     top: 103.5px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    background-color: rgb(35, 35, 35);
+    /* background-color: rgb(35, 35, 35); */
     border-top: 1.5px solid rgb(255, 255, 255);
 }
 
@@ -337,6 +440,7 @@ a:hover {
     z-index: 10000;
     top: 517px;
     left: 50%;
+    color: rgb(210, 210, 210);
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: blueviolet; */
 }
@@ -350,7 +454,7 @@ a:hover {
     height: 633px;
     padding: 0;
     margin: 0;
-    background-color: rgb(146, 140, 133);
+    /* background-color: rgb(146, 140, 133); */
 }
 
 #R_button01 {
@@ -363,7 +467,7 @@ a:hover {
     right: 0;
     padding: 0;
     margin: 0;
-    background-color: rgb(146, 140, 133);
+    /* background-color: rgb(146, 140, 133); */
 }
 
 .material-icons {
@@ -382,7 +486,7 @@ a:hover {
     margin-top: 30px;
     margin-left: 50%;
     transform: translate(-50%, 0%); /* 위치 조정 */
-    background-color: rgb(87, 64, 64);
+    /* background-color: rgb(87, 64, 64); */
 }
 
 
@@ -395,7 +499,7 @@ a:hover {
     overflow: hidden;
 
     opacity: 0; /* 처음에는 불투명도 0으로 설정 */
-    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */ 
 }
 
 .Pro_box01 img {
@@ -426,7 +530,7 @@ a:hover {
     margin-top: 80px;
     width: 100%;
     height: 150px;
-    background-color: rgb(82, 50, 50);
+    /* background-color: rgb(82, 50, 50); */
 }
 
 #d_text01 {
@@ -462,7 +566,15 @@ a:hover {
     margin-top: 300px;
     width: 76%;
     height: 580px;
-    background-color: rgb(101, 59, 59);
+    /* background-color: rgb(101, 59, 59); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#gameIMG.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #img01 {
@@ -478,7 +590,7 @@ a:hover {
     font-size: 15px;
     margin-top: 13px;
     color: rgb(255, 255, 255);
-    background-color: rgb(98, 89, 78);
+    /* background-color: rgb(98, 89, 78); */
 }
 
 /* ------ 메이드 인 유니티 ------ */
@@ -486,21 +598,36 @@ a:hover {
 #made_in {
     position: relative;
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 200px;
     width: 59%;
     height: 300px;
-    background-color: rgb(28, 28, 28);
+    /* background-color: rgb(28, 28, 28); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
 }
 
-#text05 {
+#made_in.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
+}
+
+#unityIMG {
     position: relative;
-    font-size: 60px;
-    margin: 0 auto;
-    text-align: center;
     top: 50%;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    color: rgb(255, 255, 255);
+    width: 42%;
+    height: 135px;
+    overflow: hidden;
+    /* background-color: rgb(87, 75, 60); */
+}
+
+.unityIMG img {
+    width: 100%;  /* 부모 박스에 맞게 너비를 조정 */
+    height: 100%; /* 부모 박스에 맞게 높이를 조정 */
+    object-fit: contain; /* 이미지가 비율을 유지하면서 박스 안에 맞게 들어가도록 설정 */
+    object-position: center; /* 이미지가 잘리지 않게 중앙으로 위치 */
 }
 
 /* ------ 팀 화각 ------ */
@@ -508,17 +635,25 @@ a:hover {
 #team {
     position: relative;
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 200px;
     width: 59%;
     height: 1100px;
-    background-color: rgb(26, 26, 26);
+    /* background-color: rgb(26, 26, 26); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#team.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #t_title_box {
     position: relative;
     width: 100%;
     height: 170px;
-    background-color: rgb(95, 130, 118);
+    /* background-color: rgb(95, 130, 118); */
 }
 
 #title04 {
@@ -532,7 +667,7 @@ a:hover {
     transform: translate(-50%, -50%); /* 위치 조정 */
     z-index: 10000;
     color: rgb(255, 255, 255);
-    background-color: rgb(75, 75, 51);
+    background-color: rgb(0, 0, 0);
 }
 
 #t_line {
@@ -542,7 +677,7 @@ a:hover {
     top: 103.5px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    background-color: rgb(91, 73, 73);
+    /* background-color: rgb(91, 73, 73); */
     border-top: 1.5px solid rgb(255, 255, 255);
 }
 #team_P {
@@ -550,7 +685,7 @@ a:hover {
     width: 100%;
     height: 1020px;
     z-index: 10000;
-    background-color: rgb(70, 53, 53);
+    /* background-color: rgb(70, 53, 53); */
 }
 
 #kim {
@@ -570,7 +705,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     border-radius: 100%;
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(215, 215, 215);
 }
 
 .name_k {
@@ -620,7 +755,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     border-radius: 100%;
-    background-color: rgb(155, 155, 155);
+    background: url("img/프로필/no/카피바라.png") 100%/contain no-repeat;
 }
 
 .name_n {
@@ -670,7 +805,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     border-radius: 100%;
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(215, 215, 215);
 }
 
 .name_l {
@@ -720,7 +855,7 @@ a:hover {
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     border-radius: 100%;
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(215, 215, 215);
 }
 
 .name_j {
@@ -763,6 +898,14 @@ a:hover {
     width: 59%;
     height: 300px;
     background-color: rgb(26, 26, 26);
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#G_logo.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
 #text06 {

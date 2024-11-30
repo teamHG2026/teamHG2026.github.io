@@ -46,7 +46,7 @@ a:hover {
     height: 150px;
     margin-top: 120px;
     margin-bottom: 130px;
-    background-color: rgb(92, 79, 79);
+    /* background-color: rgb(92, 79, 79); */
 }
 
 
@@ -60,7 +60,7 @@ a:hover {
     transform: translate(-50%, 0%); /* 위치 조정 */
     color: rgb(255, 255, 255);
     z-index: 10000;
-    background-color: rgb(91, 66, 37);
+    background-color: rgb(0, 0, 0);
 }
 
 #chara_line {
@@ -70,7 +70,7 @@ a:hover {
     top: 86px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    background-color: rgb(35, 35, 35);
+    /* background-color: rgb(35, 35, 35); */
     border-top: 1.5px solid rgb(255, 255, 255);
 }
 
@@ -88,9 +88,12 @@ a:hover {
     flex-basis: 25%;
     background-color: transparent;
 }
-.card-image:hover img {
-    transform: scale(1.2);     /* 이미지 크기를 1.1배로 확대 */
+
+/* .card-image가 아니라 .menber-card 호버 시 이미지가 크게 하면 텍스트 영역(.card-name)에도 호버 적용됨 */
+.member-card:hover img {
+    transform: scale(1.2);
 }
+
 
 .card-image {
     width: 100%;
@@ -99,7 +102,7 @@ a:hover {
 .card-image img {
     display: block;
     width: 100%;
-    transition: transform 0.3s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
+    transition: transform 0.5s ease-in-out; /* 마우스를 올렸을 때 부드러운 전환 효과 */
 }
 .card-name {
     width: 100%;
@@ -109,10 +112,6 @@ a:hover {
     font-size: 12px;
     color: rgb(0, 0, 0);
     text-align: center;
-}
-
-.clip:hover img {
-    transform: scale(1.0);     /* 이미지 크기를 1.1배로 확대 */
 }
 
 .card-image img.hidden {
@@ -130,15 +129,19 @@ a:hover {
 /* #team-1 .card-name {
     background-color: rgb(181, 181, 181);
 } */
+
 #team-2 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(47, 56, 82) 100%);
 }
+
 #team-3 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(110, 96, 52) 100%);
 }
+
 #team-4 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(87, 87, 87) 100%);
 }
+
 #team-5 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(55, 41, 65) 100%);
 }
@@ -165,7 +168,17 @@ a:hover {
     width: 100%;
     height: 300px;
     background-color: rgb(26, 26, 26);
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
 }
+
+#team.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
+}
+
+
 #team > p {
     position: relative;
     top: 50%;
@@ -201,13 +214,14 @@ a:hover {
     font-size: 20px;
     line-height: 370%;
     text-align: right;
-    top: -500px;
+    top: 175px; /* 메뉴 상단 위치 */
     right: 105px;
     padding-right: 35px;
     color: rgb(255, 255, 255);
     z-index: 10000;
     /* background-color: rgb(57, 57, 57); */
     border-right: 3px solid rgb(255, 255, 255);
+    overflow: hidden; /* 메뉴 아이템이 영역을 벗어나는 경우 보이지 않게 함 */
 }
 
 #menu_t > div { /* 메뉴 아이템(#mainmenu>p)은 opacity를 0, left 값을 크게 하여 시작 시 화면에서 보이지 않게 함 */
