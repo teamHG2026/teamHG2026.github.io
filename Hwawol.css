@@ -1,0 +1,469 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("fonts/Pretendard-Regular.otf") format("opentype");
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 100;
+    background-color: rgb(0, 0, 0);
+}
+
+a, a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgb(66, 203, 221);
+}
+
+
+/* ------ 메인 ------ */
+
+#logo {
+    position: fixed;
+    top: 6%;
+    right: 4%;
+    width: 80px;
+    height: 80px;
+    /* background-color: rgb(180, 42, 255); */
+    z-index: 10000;
+    background: url("img/TR.png") 100%/contain no-repeat;
+}
+
+#menu_t {
+    opacity: 0.0;
+    position: fixed;
+    width: 130px;
+    height: 500px;
+    font-size: 20px;
+    line-height: 370%;
+    text-align: right;
+    top: 175px; /* 메뉴 상단 위치 */
+    right: 105px;
+    padding-right: 35px;
+    color: rgb(255, 255, 255);
+    z-index: 10000;
+    /* background-color: rgb(57, 57, 57); */
+    border-right: 3px solid rgb(255, 255, 255);
+    overflow: hidden; /* 메뉴 아이템이 영역을 벗어나는 경우 보이지 않게 함 */
+}
+
+#menu_t > div { /* 메뉴 아이템(#mainmenu>p)은 opacity를 0, left 값을 크게 하여 시작 시 화면에서 보이지 않게 함 */
+    position: relative;
+    opacity: 0.0;
+    left: 0px;
+}
+
+#menu_t:link {
+    text-decoration: none;
+}
+#menu_t:hover {
+    text-decoration: none;
+}
+
+.m_event {
+    text-decoration: line-through;
+}
+
+.m_item {
+    text-decoration: line-through;
+}
+
+.m_system {
+    text-decoration: line-through;
+}
+
+#box01 {
+    position: relative;
+    width: 1200px;
+    height: 950px;
+    left: 17%;
+    /* background-color: rgb(79, 92, 77); */
+}
+
+#chara_illu {
+    position: relative;
+    width: 1100px;
+    height: 900px;
+    background-color: rgb(114, 114, 114);
+    background: url("img/화월/화월LD.png") 100%/cover no-repeat;
+
+    animation: customFadeInDown 1s ease-out; /* 1초 동안 부드럽게 진행 */
+}
+
+@keyframes customFadeInDown {
+    0% {
+        opacity: 0;               /* 시작 시 투명도 0 */
+        transform: translateY(-40px); /* 위에서 내려오게 하기 위해 Y축으로 -30px 이동 */
+    }
+    100% {
+        opacity: 1;               /* 끝날 때 완전하게 나타남 */
+        transform: translateY(0);  /* 원래 위치로 돌아옴 */
+    }
+}
+
+/* ------ 스토리 ------ */
+
+#story {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 59%;
+    height: 350px;
+    /* background-color: rgb(32, 32, 32); */
+    border-radius: 30px;
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#story.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
+}
+
+#story_title_box {
+    position: relative;
+    margin: 0 auto;
+    top: 21%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+}
+
+#title01 {
+    position: absolute;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    margin-top: 15px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: white;
+    z-index: 10000;
+    background-color: rgb(0, 0, 0);
+}
+
+#story_line {
+    position: absolute;
+    width: 13%;
+    height: 37.5px;
+    top: -100px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    background-color: rgb(151, 83, 83);
+    background: url('img/문양.png') center/contain no-repeat;
+}
+
+#story_line2 {
+    position: absolute;
+    width: 70%;
+    height: 37.5px;
+    top: -100px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    background-color: rgb(151, 83, 83);
+    background: url('img/T_s_문양.png') center/contain no-repeat;
+}
+
+
+#text01 {
+    position: absolute;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 175%;
+    width: 100%;
+    top: 240px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: white;
+}
+
+/* ------ 주요 스킬 ------ */
+
+#skill {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 300px;
+    width: 59%;
+    height: 650px;
+    /* background-color: rgb(26, 26, 26); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#skill.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
+}
+
+#s_title_box {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /* background-color: rgb(95, 130, 118); */
+}
+
+#title02 {
+    position: absolute;
+    font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+    top: 48px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+#s_line {
+    position: absolute;
+    width: 65%;
+    height: 34px;
+    top: 50px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(151, 83, 83); */
+    background: url('img/T_문양.png') center/contain no-repeat;
+}
+
+#s_small_box {
+    position: absolute;
+    width: 410px;
+    height: 550px;
+    /* background-color: rgb(65, 101, 99); */
+}
+
+#text02 {
+    position: absolute;
+    font-size: 17px;
+    line-height: 150%;
+    text-align: left;
+    top: 120px;
+    left: 70px;
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(45, 71, 62); */
+}
+
+.text002 {
+    font-size: 27px;
+}
+
+#box02A{
+    position: absolute;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    top: 367px;
+    left: 55px;
+    /* background-color: rgb(87, 64, 64); */
+}
+
+.box02 {
+    width: 35%; /* 너비 설정 */
+    height: 65px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    padding-top: 50px;
+    margin: 0 15px;
+}
+
+.skill{
+    background: url("img/스킬/려화/W/려화-불꽃베기\(1\)_W.png") 100%/contain no-repeat;
+}
+
+.skill2{
+    background: url("img/스킬/려화/W/려화-회전베기\(1\)_W.png") 100%/contain no-repeat;
+}
+
+#box03A {
+    position: absolute;
+    width: 584px;
+    height: 550px;
+    right: 0;
+    /* background-color: azure; */
+}
+
+#box03 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 560px;
+    height: 380px;
+    background: url('img/스킬/려화/W/려화-불꽃베기(1)_W.png') center/contain no-repeat;
+    background-color: rgb(71, 71, 71);
+}
+
+/* ------ 팀 소속 ------ */
+
+#chara_team {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 300px;
+    width: 59%;
+    height: 630px;
+    /* background-color: rgb(82, 66, 81); */
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#chara_team.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
+}
+
+#c_title_box {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    /* background-color: rgb(95, 130, 118); */
+}
+
+#title03 {
+    position: absolute;
+    font-size: 55px;
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+    top: 65px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+#c_line {
+    position: absolute;
+    width: 70%;
+    height: 37px;
+    top: 67px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    /* background-color: rgb(151, 83, 83); */
+    background: url('img/T_문양.png') center/contain no-repeat;
+}
+
+#chara_boxA{
+    position: relative;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    width: 100%;
+    top: 70px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(87, 64, 64); */
+}
+
+
+.chara_box01 {
+    width: 200px; /* 너비 설정 */
+    height: 200px; /* 높이 설정 */
+    line-height: 10%; /* 수직 중앙 정렬 */
+    border-radius: 20px;
+    /* border: 1.5px solid rgb(255, 255, 255); */
+    background-color: rgb(41, 47, 65); /* 배경색 설정 */
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.chara_box01 img {
+    width: 100%;
+}
+
+#chara_textA{
+    position: relative;
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    width: 100%;
+    top: 100px;
+    margin-left: 50%;
+    transform: translate(-50%, 0%); /* 위치 조정 */
+    /* background-color: rgb(64, 69, 87); */
+}
+
+
+.chara_text01 {
+    width: 22%; /* 너비 설정 */
+    height: 50px; /* 높이 설정 */
+    font-size: 23px;
+    text-align: center;
+    line-height: 10%; /* 수직 중앙 정렬 */
+    color: white;
+    /* background-color: rgb(41, 47, 65); */
+    margin: 0 10px;
+}
+
+#c_button_box {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 120px;
+    /* background-color: rgb(52, 75, 68); */
+}
+
+#d_text01 {
+    position: absolute;
+    font-size: 22px;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    z-index: 10000;
+    color: rgb(255, 255, 255);
+}
+
+#d_button01 {
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    border-radius: 50px;
+    border: 2px solid white; /* 흰색 외각선 */
+    background-color: transparent; /* 내부는 투명 */
+}
+
+/* ------ 팀 로고 ------ */
+
+#team {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 300px;
+    margin-bottom: 70px;
+    width: 59%;
+    height: 300px;
+    background-color: rgb(26, 26, 26);
+    opacity: 0; /* 처음에는 불투명도 0으로 설정 */
+    transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
+    transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+}
+
+#team.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명도 1로 변경 */
+    transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
+}
+
+#text06 {
+    position: relative;
+    font-size: 60px;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: rgb(255, 255, 255);
+}

@@ -125,7 +125,7 @@ window.addEventListener('scroll', function() {
             <h1><span class="text002">혼령인도</span></h1>
             <br>
             장승을 소환하여 주변의 적에게 피해를 주고<br>
-            장승쪽으로 끌어당긴다.
+            장승쪽으로 끌어당긴다
         `;
     });
 });
