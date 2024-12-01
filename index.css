@@ -24,7 +24,7 @@ a, a:hover, a:link, a:visited {
 }
 
 a:hover {
-    color: rgb(71, 165, 76);
+    color: rgb(66, 203, 221);
 }
 
 /* ------ 메인 ------ */
@@ -486,7 +486,7 @@ a:hover {
     font-size: 70px !important;
 }
 .material-icons:hover {
-    color:rgb(179, 52, 52);
+    color:rgb(66, 203, 221);
 }
 
 #pro_boxA{
@@ -513,6 +513,8 @@ a:hover {
     opacity: 0; /* 처음에는 불투명도 0으로 설정 */
     transform: translateY(50px); /* 초기 위치 설정: 화면 밖으로 설정 */
     transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
+    pointer-events: auto; /* 클릭 가능하도록 변경 */
+    z-index: 1; /* 클릭 우선순위 확보 */
 }
 
 .clip {

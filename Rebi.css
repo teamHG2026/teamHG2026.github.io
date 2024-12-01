@@ -92,7 +92,7 @@ a:hover {
     width: 1100px;
     height: 900px;
     background-color: rgb(114, 114, 114);
-    background: url("img/려화/려화LD.png") 100%/cover no-repeat;
+    background: url("img/레비/레비LD.png") 100%/cover no-repeat;
 
     animation: customFadeInDown 1s ease-out; /* 1초 동안 부드럽게 진행 */
 }

@@ -100,30 +100,32 @@ window.addEventListener('scroll', function() {
     box03.style.backgroundRepeat = 'no-repeat';
     box03.style.backgroundPosition = 'center';
     text02.innerHTML = `
-        <h1><span class="text002">불꽃베기</span></h1>
+        <h1><span class="text002">낙인</span></h1>
         <br>
-        주변의 적에게 150%의 피해를 입히고<br>
-        화상을 입힌다
+        부적을 사용하여 저주를 내린다 <br>
+        매 초마다 1씩 대미지를 주고 5초 뒤 부적이 터지며 100% 피해를 추가로 입힌다 <br>
+        효과가 지속될동안 이속이 느려진다
     `;
 
     // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
         box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-불꽃베기(1)_W.png")';
         text02.innerHTML = `
-            <h1><span class="text002">불꽃베기</span></h1>
+            <h1><span class="text002">낙인</span></h1>
             <br>
-            주변의 적에게 150%의 피해를 입히고<br>
-            화상을 입힌다
+            부적을 사용하여 저주를 내린다 <br>
+            매 초마다 1씩 대미지를 주고 5초 뒤 부적이 터지며 100% 피해를 추가로 입힌다 <br>
+            효과가 지속될동안 이속이 느려진다
         `;
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
         box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-회전베기(1)_W.png")';
         text02.innerHTML = `
-            <h1><span class="text002">회전베기</span></h1>
+            <h1><span class="text002">혼령인도</span></h1>
             <br>
-            회전하며 주변의 적에게 200%의<br>
-            피해를 입힌다
+            장승을 소환하여 주변의 적에게 피해를 주고<br>
+            장승쪽으로 끌어당긴다.
         `;
     });
 });

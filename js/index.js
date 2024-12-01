@@ -171,34 +171,34 @@ $(function () {
     let currentIndex = 0; // 현재 슬라이드 인덱스
     const slideImages = [
         [
-            'img/려화/소속_려화.png',
-            'img/실루엣/소속/소속_소운.png',
-            'img/실루엣/소속/소속_도월.png',
-            'img/실루엣/소속/소속_연이.png',
+            { src: 'img/려화/소속_려화.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
+            { src: 'img/실루엣/소속/소속_소운.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_도월.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_연이.png', href: '#' },
         ],
         [
-            'img/레비/소속_레비.png',
-            'img/실루엣/소속/소속_망나니.png',
-            'img/실루엣/소속/소속_서화.png',
-            'img/실루엣/소속/소속_앨리스.png',
+            { src: 'img/레비/소속_레비.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
+            { src: 'img/실루엣/소속/소속_망나니.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_서화.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_앨리스.png', href: '#' },
         ],
         [
-            'img/알리/소속_알리.png',
-            'img/실루엣/소속/소속_해태.png',
-            'img/실루엣/소속/소속_사린.png',
-            'img/실루엣/소속/소속_해랑.png',
+            { src: 'img/알리/소속_알리.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
+            { src: 'img/실루엣/소속/소속_해태.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_사린.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_해랑.png', href: '#' },
         ],
         [
-            'img/화월/소속_화월.png',
-            'img/실루엣/소속/소속_비.png',
-            'img/실루엣/소속/소속_소르귀.png',
-            'img/실루엣/소속/소속_쥐돌이.png',
+            { src: 'img/화월/소속_화월.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
+            { src: 'img/실루엣/소속/소속_비.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_소르귀.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_쥐돌이.png', href: '#' },
         ],
         [
-            'img/하늘비/소속_하늘비 (아기).png',
-            'img/실루엣/소속/소속_마야.png',
-            'img/실루엣/소속/소속_이류.png',
-            'img/실루엣/소속/소속_주지탈.png',
+            { src: 'img/하늘비/소속_하늘비 (아기).png', href: 'https://teamHG2026.github.io/Ryeohwa' },
+            { src: 'img/실루엣/소속/소속_마야.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_이류.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_주지탈.png', href: '#' },
         ],
     ]; // 슬라이드마다 보여줄 이미지 세트
 
@@ -206,28 +206,34 @@ $(function () {
     const totalSlides = slideImages.length; // 슬라이드 세트 개수
 
     function updateSlides() {
-        // 이미지 업데이트
         const images = slideImages[currentIndex];
+        const $slides = $('.Pro_box01 img');
+    
         $slides.each(function (index) {
-            $(this).attr('src', images[index]); // 이미지 src 변경
+            const image = images[index];
+            if (image) {
+                const $anchor = $(this).parent('a');
+                $(this).attr('src', image.src);
+                $anchor.attr('href', image.href);
+    
+                // 디버깅: 콘솔에 현재 링크 표시
+                console.log('Link updated to:', image.href);
+            }
         });
-
-        // 애니메이션 초기화: 'visible' 클래스 제거
+    
+        // 애니메이션 초기화
         const boxes = document.querySelectorAll('.Pro_box01');
         boxes.forEach((box) => {
-            box.classList.remove('visible'); // 'visible' 클래스를 제거하여 애니메이션 초기화
-            box.style.transition = 'none'; // transition 초기화 (애니메이션 끊김 방지)
+            box.classList.remove('visible');
+            box.style.transition = 'none';
         });
-
-        // 강제로 현재 스크롤 상태에서 애니메이션을 다시 적용
-        setTimeout(function() {
-            // transition 속성 다시 추가하여 애니메이션을 활성화
+    
+        setTimeout(() => {
             boxes.forEach((box) => {
-                box.style.transition = 'opacity 1s ease, transform 1s ease'; // 애니메이션 재활성화
+                box.style.transition = 'opacity 1s ease, transform 1s ease';
             });
-
-            triggerScrollAnimation(); // 애니메이션 실행
-        }, 50); // 50ms 후 애니메이션 시작
+            triggerScrollAnimation();
+        }, 50);
     }
 
     // 왼쪽 버튼 클릭
