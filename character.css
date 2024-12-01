@@ -67,11 +67,11 @@ a:hover {
     position: absolute;
     width: 82%;
     height: 37px;
-    top: 86px;
+    top: 70px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(35, 35, 35); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양\(chara\).png') center/contain no-repeat;
 }
 
 /* 팀원 카드는 CSS CLASS로 동일하게 관리 */

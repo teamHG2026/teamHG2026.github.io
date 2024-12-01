@@ -113,10 +113,11 @@ a:hover {
 #story {
     position: relative;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 100px;
     width: 59%;
     height: 350px;
     /* background-color: rgb(32, 32, 32); */
+    border-radius: 30px;
     opacity: 0; /* 처음에는 불투명도 0으로 설정 */
     transform: translateY(50px); /* 처음 위치에서 50px 아래로 설정 */
     transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
@@ -127,23 +128,58 @@ a:hover {
     transform: translateY(0); /* 요소가 원래 위치로 올라옴 */
 }
 
-#title01 {
+#story_title_box {
     position: relative;
-    font-size: 20px;
     margin: 0 auto;
-    text-align: center;
     top: 21%;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
-    color: white;
 }
 
+#title01 {
+    position: absolute;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    margin-top: 15px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    color: white;
+    z-index: 10000;
+    background-color: rgb(0, 0, 0);
+}
+
+#story_line {
+    position: absolute;
+    width: 25%;
+    height: 37.5px;
+    top: -100px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    background-color: rgb(151, 83, 83);
+    background: url('img/문양.png') center/contain no-repeat;
+}
+
+#story_line2 {
+    position: absolute;
+    width: 70%;
+    height: 37.5px;
+    top: -100px;
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 위치 조정 */
+    background-color: rgb(151, 83, 83);
+    background: url('img/T_s_문양.png') center/contain no-repeat;
+}
+
+
 #text01 {
-    position: relative;
+    position: absolute;
     font-size: 18px;
     margin: 0 auto;
     text-align: center;
-    top: 40%;
+    width: 100%;
+    top: 240px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     color: white;
@@ -193,11 +229,11 @@ a:hover {
     position: absolute;
     width: 70%;
     height: 34px;
-    top: 63px;
+    top: 50px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(151, 83, 83); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양.png') center/contain no-repeat;
 }
 
 #s_small_box {
@@ -313,11 +349,11 @@ a:hover {
     position: absolute;
     width: 70%;
     height: 37px;
-    top: 83px;
+    top: 67px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(151, 83, 83); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양.png') center/contain no-repeat;
 }
 
 #chara_boxA{

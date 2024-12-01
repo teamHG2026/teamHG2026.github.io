@@ -145,11 +145,11 @@ a:hover {
     position: absolute;
     width: 70%;
     height: 37.5px;
-    top: 113px;
+    top: 95px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(151, 83, 83); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양\(story\).png') center/contain no-repeat;
 }
 
 #s_text_box {
@@ -228,7 +228,6 @@ a:hover {
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(35, 35, 35); */
     background: url('img/T_문양.png') center/contain no-repeat;
-    /* border-top: 1.5px solid rgb(255, 255, 255); */
 }
 
 #g_ex_box01 {
@@ -439,11 +438,11 @@ a:hover {
     position: absolute;
     width: 82%;
     height: 37px;
-    top: 103.5px;
+    top: 85px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(35, 35, 35); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양.png') center/contain no-repeat;
 }
 
 #A_button01 {
@@ -690,11 +689,11 @@ a:hover {
     position: absolute;
     width: 82%;
     height: 37px;
-    top: 103.5px;
+    top: 88px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(91, 73, 73); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양.png') center/contain no-repeat;
 }
 #team_P {
     position: relative;
