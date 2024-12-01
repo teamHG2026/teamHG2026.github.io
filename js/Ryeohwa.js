@@ -88,13 +88,26 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// #box02A를 클릭할 때
-$('#box02A:nth-child(1)').on('click', function() {
-    // #box03의 이미지의 src를 변경
-    $('#box03').stop()
-        .animate({'opacity': 0}, 200, function() {
-            // 이미지 교체 후 fade-in
-            $('#box03 img').attr('src', 'img/스킬/려화/W/려화-불꽃베기\(1\)_W.png') // 새로운 이미지 경로로 변경
-                .animate({'opacity': 1}, 50);
-        });
+// DOM이 로드된 후 실행
+document.addEventListener('DOMContentLoaded', function () {
+    // 이미지 변경할 대상 요소
+    const box03 = document.querySelector('#box03');
+    
+    // 각 스킬 버튼에 이벤트 리스너 추가
+    const skill1 = document.querySelector('.box02.skill');
+    const skill2 = document.querySelector('.box02.skill2');
+    
+    skill1.addEventListener('click', function () {
+        box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-불꽃베기(1)_W.png")'; // 초기 이미지
+        box03.style.backgroundSize = 'contain'; // 배경 크기 설정
+        box03.style.backgroundRepeat = 'no-repeat'; // 반복 없음
+        box03.style.backgroundPosition = 'center'; // 중앙 정렬
+    });
+
+    skill2.addEventListener('click', function () {
+        box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-회전베기(1)_W.png")'; // 변경할 이미지
+        box03.style.backgroundSize = 'contain'; // 배경 크기 설정
+        box03.style.backgroundRepeat = 'no-repeat'; // 반복 없음
+        box03.style.backgroundPosition = 'center'; // 중앙 정렬
+    });
 });

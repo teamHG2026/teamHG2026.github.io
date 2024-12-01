@@ -223,11 +223,12 @@ a:hover {
     position: absolute;
     width: 82%;
     height: 37px;
-    top: 103.5px;
+    top: 85px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 위치 조정 */
     /* background-color: rgb(35, 35, 35); */
-    border-top: 1.5px solid rgb(255, 255, 255);
+    background: url('img/T_문양.png') center/contain no-repeat;
+    /* border-top: 1.5px solid rgb(255, 255, 255); */
 }
 
 #g_ex_box01 {
