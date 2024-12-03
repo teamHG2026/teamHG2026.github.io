@@ -91,6 +91,14 @@ a:hover {
     background-color: rgb(98, 128, 136);
 }
 
+#home {
+    position: fixed;
+    color: white;
+    top: 5px;
+    left: 40px;
+    z-index: 100000;
+}
+
 #button_up {
     position: fixed;
     bottom: 55px;

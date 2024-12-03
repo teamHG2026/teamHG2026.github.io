@@ -79,6 +79,14 @@ a:hover {
     text-decoration: line-through;
 }
 
+#home {
+    position: fixed;
+    color: white;
+    top: 5px;
+    left: 40px;
+    z-index: 100000;
+}
+
 #box01 {
     position: relative;
     width: 1200px;
