@@ -285,7 +285,7 @@ a:hover {
 }
 
 .skill2{
-    background: url("img/스킬/려화/W/려화-회전베기\(1\)_W.png") 100%/contain no-repeat;
+    background: url("img/스킬/하늘비/W/안\ 맞을\ 건데_W.png") 100%/contain no-repeat;
 }
 
 #box03A {
@@ -303,7 +303,7 @@ a:hover {
     width: 560px;
     height: 380px;
     background: url('img/스킬/려화/W/려화-불꽃베기(1)_W.png') center/contain no-repeat;
-    background-color: rgb(54, 41, 65);
+    background-color: rgb(47, 41, 65);
 }
 
 /* ------ 팀 소속 ------ */

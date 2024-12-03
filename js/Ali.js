@@ -95,7 +95,7 @@ window.addEventListener('scroll', function() {
     const text02 = document.querySelector('#text02'); // 텍스트 변경할 요소
 
     // 초기 상태 설정
-    box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-불꽃베기(1)_W.png")';
+    box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
     box03.style.backgroundSize = 'contain';
     box03.style.backgroundRepeat = 'no-repeat';
     box03.style.backgroundPosition = 'center';
@@ -108,7 +108,7 @@ window.addEventListener('scroll', function() {
 
     // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
-        box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-불꽃베기(1)_W.png")';
+        box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
         text02.innerHTML = `
             <h1><span class="text002">척도</span></h1>
             <br>
@@ -118,7 +118,7 @@ window.addEventListener('scroll', function() {
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
-        box03.style.backgroundImage = 'url("img/스킬/려화/W/려화-회전베기(1)_W.png")';
+        box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
         text02.innerHTML = `
             <h1><span class="text002">화살주의보</span></h1>
             <br>
