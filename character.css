@@ -290,6 +290,7 @@ a:hover {
 
     #team {
         height: 200px;
+        width: 460px;
         margin-top: 150px;
     }
 
@@ -317,10 +318,13 @@ a:hover {
     }
 
     #main-container {
+        margin: 0 auto;
         width: 460px;
     }
 
     #chara_title_box {
+        margin: 0 auto;
+        width: 360px;
         margin-top: 120px;
         margin-bottom: 90px;
         background-color: rgb(92, 79, 79);
@@ -334,7 +338,7 @@ a:hover {
     
     #chara_line {
         position: absolute;
-        width: 460px;
+        width: 360px;
         height: 37px;
         top: 70px;
         left: 50%; /* 가로 중앙 */
@@ -349,8 +353,10 @@ a:hover {
     }
 
     #team {
+        margin: 0 auto;
         position: relative;
         margin: 0 auto;
+        width: 460px;
         margin-top: 150px;
         margin-bottom: 70px;
         background-color: rgb(178, 55, 202);
