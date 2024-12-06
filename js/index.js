@@ -172,33 +172,33 @@ $(function () {
     const slideImages = [
         [
             { src: 'img/려화/소속_려화.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
-            { src: 'img/실루엣/소속/소속_소운.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_도월.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_연이.png', href: '#' },
+            { src: 'img/실루엣/소속/소속_소운.png'},
+            { src: 'img/실루엣/소속/소속_도월.png'},
+            { src: 'img/실루엣/소속/소속_연이.png'},
         ],
         [
-            { src: 'img/레비/소속_레비.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
-            { src: 'img/실루엣/소속/소속_망나니.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_서화.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_앨리스.png', href: '#' },
+            { src: 'img/레비/소속_레비.png', href: 'https://teamHG2026.github.io/Rebi' },
+            { src: 'img/실루엣/소속/소속_망나니.png'},
+            { src: 'img/실루엣/소속/소속_서화.png'},
+            { src: 'img/실루엣/소속/소속_앨리스.png'},
         ],
         [
-            { src: 'img/알리/소속_알리.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
-            { src: 'img/실루엣/소속/소속_해태.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_사린.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_해랑.png', href: '#' },
+            { src: 'img/알리/소속_알리.png', href: 'https://teamHG2026.github.io/Ali' },
+            { src: 'img/실루엣/소속/소속_해태.png'},
+            { src: 'img/실루엣/소속/소속_사린.png'},
+            { src: 'img/실루엣/소속/소속_해랑.png'},
         ],
         [
-            { src: 'img/화월/소속_화월.png', href: 'https://teamHG2026.github.io/Ryeohwa' },
-            { src: 'img/실루엣/소속/소속_비.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_소르귀.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_쥐돌이.png', href: '#' },
+            { src: 'img/화월/소속_화월.png', href: 'https://teamHG2026.github.io/Hwawol' },
+            { src: 'img/실루엣/소속/소속_비.png'},
+            { src: 'img/실루엣/소속/소속_소르귀.png'},
+            { src: 'img/실루엣/소속/소속_쥐돌이.png'},
         ],
         [
-            { src: 'img/하늘비/소속_하늘비 (아기).png', href: 'https://teamHG2026.github.io/Ryeohwa' },
-            { src: 'img/실루엣/소속/소속_마야.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_이류.png', href: '#' },
-            { src: 'img/실루엣/소속/소속_주지탈.png', href: '#' },
+            { src: 'img/하늘비/소속_하늘비 (아기).png', href: 'https://teamHG2026.github.io/Haneulbi' },
+            { src: 'img/실루엣/소속/소속_마야.png'},
+            { src: 'img/실루엣/소속/소속_이류.png'},
+            { src: 'img/실루엣/소속/소속_주지탈.png'},
         ],
     ]; // 슬라이드마다 보여줄 이미지 세트
 
@@ -341,7 +341,7 @@ function updateText() {
     const textBox = document.getElementById("text01");
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 1030) {
+    if (screenWidth <= 1390) {
         textBox.innerHTML = `
             <p>
                 옛날 여러 신들이 모여 하나의 세상을 만들었고<br>
