@@ -88,42 +88,121 @@ window.addEventListener('scroll', function() {
     });
 });
 
-    // DOM이 로드된 후 실행
-    document.addEventListener('DOMContentLoaded', function () {
-    // 이미지 변경할 대상 요소
+    // 초기 이벤트 리스너 추가
+function setupSkillListeners() {
     const box03 = document.querySelector('#box03');
-    const text02 = document.querySelector('#text02'); // 텍스트 변경할 요소
+    const text02 = document.querySelector('#text02');
 
-    // 초기 상태 설정
-    box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    box03.style.backgroundSize = 'contain';
-    box03.style.backgroundRepeat = 'no-repeat';
-    box03.style.backgroundPosition = 'center';
-    text02.innerHTML = `
-        <h1><span class="text002">불꽃베기</span></h1>
-        <br>
-        주변의 적에게 150%의 피해를 입히고<br>
-        화상을 입힌다
-    `;
-
-    // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
+        if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">불꽃베기</span></h1>
+                <br>
+                주변의 적에게 150%의 피해를 <br>입히고
+                화상을 입힌다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">불꽃베기</span></h1>
+                <br>
+                주변의 적에게 150%의 피해를 입히고<br>
+                화상을 입힌다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">불꽃베기</span></h1>
-            <br>
-            주변의 적에게 150%의 피해를 입히고<br>
-            화상을 입힌다
-        `;
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
+        if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">회전베기</span></h1>
+                <br>
+                회전하며 주변의 적에게 <br>200%의 피해를 입힌다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">회전베기</span></h1>
+                <br>
+                회전하며 주변의 적에게 200%의<br>
+                피해를 입힌다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">회전베기</span></h1>
-            <br>
-            회전하며 주변의 적에게 200%의<br>
-            피해를 입힌다
-        `;
     });
+}
+
+// 초기화
+setupSkillListeners();
+
+// 화면 크기 변화에 따른 업데이트
+window.addEventListener('resize', function () {
+    setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
 });
+
+//뷰 1030px 세계관
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 1250) {
+        textBox.innerHTML = `
+            <p> 활발한 화산지역에서 온 려화는 화려하게 쌍검과 뜨거운 불을 사용하여 <br>
+                적을 정화하고 소멸시킵니다 <br>
+                팀의 최전방에 서서 팀을 이끌며 적을 강하고 빠르게 처치합니다 <br>
+                그 누구보다 책임감과 사명감이 강하여 한번 맡은 임무는 항상 잘 해결이 됩니다 <br>
+                항상 침착하고 표정의 변화가 크게없는 그녀이지만 <br>
+                화가 나면 근처의 공기는 견디기 힘들정도로 온도가 높아집니다</p>
+        `;
+    } else {
+        textBox.innerHTML = `
+            <p> 활발한 화산지역에서 온 려화는 화려하게 쌍검과 뜨거운 불을 사용하여 적을 정화하고 소멸시킵니다 <br>
+                팀의 최전방에 서서 팀을 이끌며 적을 강하고 빠르게 처치합니다 <br>
+                그 누구보다 책임감과 사명감이 강하여 한번 맡은 임무는 항상 잘 해결이 됩니다 <br>
+                항상 침착하고 표정의 변화가 크게없는 그녀이지만 <br>
+                화가 나면 근처의 공기는 견디기 힘들정도로 온도가 높아집니다</p>
+        `;
+    }
+}
+
+// 초기 실행
+updateText();
+
+// 화면 크기 변경 시 텍스트 업데이트
+window.addEventListener("resize", updateText);
+
+//뷰 1030px 세계관
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 750) {
+        textBox.innerHTML = `
+            <p> 활발한 화산지역에서 온 려화는 화려하게 <br>
+                쌍검과 뜨거운 불을 사용하여 <br>
+                적을 정화하고 소멸시킵니다 <br>
+                팀의 최전방에 서서 팀을 이끌며 적을 강하고 <br>
+                빠르게 처치합니다 <br>
+                그 누구보다 책임감과 사명감이 강하여 <br>
+                한 번 맡은 임무는 항상 잘 해결이 됩니다 <br>
+                항상 침착하고 표정의 변화가 크게없는 그녀이지만 <br>
+                화가 나면 근처의 공기는 견디기 힘들정도로 <br>
+                온도가 높아집니다</p>
+        `;
+    } else {
+        textBox.innerHTML = `
+            <p> 활발한 화산지역에서 온 려화는 화려하게 쌍검과 뜨거운 불을 사용하여 적을 정화하고 소멸시킵니다 <br>
+                팀의 최전방에 서서 팀을 이끌며 적을 강하고 빠르게 처치합니다 <br>
+                그 누구보다 책임감과 사명감이 강하여 한번 맡은 임무는 항상 잘 해결이 됩니다 <br>
+                항상 침착하고 표정의 변화가 크게없는 그녀이지만 <br>
+                화가 나면 근처의 공기는 견디기 힘들정도로 온도가 높아집니다</p>
+        `;
+    }
+}
+
+// 초기 실행
+updateText();
+
+// 화면 크기 변경 시 텍스트 업데이트
+window.addEventListener("resize", updateText);
