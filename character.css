@@ -269,7 +269,6 @@ a:hover {
     #chara_title_box {
         margin-top: 120px;
         margin-bottom: 90px;
-        background-color: rgb(92, 79, 79);
     }
 
     .team-container {
@@ -281,18 +280,13 @@ a:hover {
         gap: 29px;
         row-gap: 70px;
         justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
-        background-color: rgb(76, 68, 52);
     }
 
     .member-card {
         flex-basis: 35%;
     }
 
-    #team {
-        height: 200px;
-        width: 460px;
-        margin-top: 150px;
-    }
+
 
 }
 
@@ -327,7 +321,6 @@ a:hover {
         width: 360px;
         margin-top: 120px;
         margin-bottom: 90px;
-        background-color: rgb(92, 79, 79);
     }
     
 
@@ -344,7 +337,6 @@ a:hover {
         top: 70px;
         left: 50%; /* 가로 중앙 */
         transform: translate(-50%, -50%); /* 위치 조정 */
-        background-color: rgb(35, 35, 35);
         background: url('img/T_문양\(story\).png') center/contain no-repeat;
     }
 
@@ -354,13 +346,10 @@ a:hover {
     }
 
     #team {
-        margin: 0 auto;
-        position: relative;
-        margin: 0 auto;
-        width: 460px;
+        width: 360px;
+        height: 200px;
         margin-top: 150px;
         margin-bottom: 70px;
-        background-color: rgb(178, 55, 202);
     }
 }
 
