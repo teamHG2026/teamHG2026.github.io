@@ -88,56 +88,6 @@ window.addEventListener('scroll', function() {
     });
 });
 
-    // 초기 이벤트 리스너 추가
-function setupSkillListeners() {
-    const box03 = document.querySelector('#box03');
-    const text02 = document.querySelector('#text02');
-
-    document.querySelector('.box02.skill').addEventListener('click', function () {
-        if (window.innerWidth <= 750) {
-            text02.innerHTML = `
-                <h1><span class="text002">불꽃베기</span></h1>
-                <br>
-                주변의 적에게 150%의 피해를 <br>입히고
-                화상을 입힌다
-            `;
-        } else {
-            text02.innerHTML = `
-                <h1><span class="text002">불꽃베기</span></h1>
-                <br>
-                주변의 적에게 150%의 피해를 입히고<br>
-                화상을 입힌다
-            `;
-        }
-        box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    });
-
-    document.querySelector('.box02.skill2').addEventListener('click', function () {
-        if (window.innerWidth <= 750) {
-            text02.innerHTML = `
-                <h1><span class="text002">회전베기</span></h1>
-                <br>
-                회전하며 주변의 적에게 <br>200%의 피해를 입힌다
-            `;
-        } else {
-            text02.innerHTML = `
-                <h1><span class="text002">회전베기</span></h1>
-                <br>
-                회전하며 주변의 적에게 200%의<br>
-                피해를 입힌다
-            `;
-        }
-        box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    });
-}
-
-// 초기화
-setupSkillListeners();
-
-// 화면 크기 변화에 따른 업데이트
-window.addEventListener('resize', function () {
-    setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
-});
 
 //뷰 1030px 세계관
 
@@ -206,3 +156,55 @@ updateText();
 
 // 화면 크기 변경 시 텍스트 업데이트
 window.addEventListener("resize", updateText);
+
+
+    // 초기 이벤트 리스너 추가
+    function setupSkillListeners() {
+        const box03 = document.querySelector('#box03');
+        const text02 = document.querySelector('#text02');
+    
+        document.querySelector('.box02.skill').addEventListener('click', function () {
+            if (window.innerWidth <= 750) {
+                text02.innerHTML = `
+                    <h1><span class="text002">불꽃베기</span></h1>
+                    <br>
+                    주변의 적에게 150%의 피해를 <br>
+                    입히고 화상을 입힌다
+                `;
+            } else {
+                text02.innerHTML = `
+                    <h1><span class="text002">불꽃베기</span></h1>
+                    <br>
+                    주변의 적에게 150%의 피해를 입히고<br>
+                    화상을 입힌다
+                `;
+            }
+            box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
+        });
+    
+        document.querySelector('.box02.skill2').addEventListener('click', function () {
+            if (window.innerWidth <= 750) {
+                text02.innerHTML = `
+                    <h1><span class="text002">회전베기</span></h1>
+                    <br>
+                    회전하며 주변의 적에게 <br>200%의 피해를 입힌다
+                `;
+            } else {
+                text02.innerHTML = `
+                    <h1><span class="text002">회전베기</span></h1>
+                    <br>
+                    회전하며 주변의 적에게 200%의<br>
+                    피해를 입힌다
+                `;
+            }
+            box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
+        });
+    }
+    
+    // 초기화
+    setupSkillListeners();
+    
+    // 화면 크기 변화에 따른 업데이트
+    window.addEventListener('resize', function () {
+        setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
+    });

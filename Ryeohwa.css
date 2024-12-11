@@ -538,10 +538,11 @@ a:hover {
     }
 
     #box02A{
-        width: 170px;
-        height: 70px;
-        top: 450px;
-        left: 30px;
+        width: 150px;
+        height: 80px;
+        top: 370px;
+        left: 18px;
+        z-index: 10000;
     }
 
     #box03A {
@@ -668,8 +669,9 @@ a:hover {
     #box02A{
         width: 140px;
         height: 40px;
-        top: 450px;
-        left: 11px;
+        top: 350px;
+        left: -7px;
+        z-index: 10000;
     }
 
     #box03A {
@@ -740,5 +742,60 @@ a:hover {
         height: 200px;
         width: 460px;
         margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #skill {
+        margin-top: 200px;
+        width: 400px;
+        height: 330px;
+    }
+
+    #title02 {
+        font-size: 33px;
+        width: 150px;
+    }
+
+    #s_small_box {
+        width: 180px;
+        height: 330px;
+    }
+
+    #text02 {
+        margin-top: 70px;
+        width: 250px;
+        font-size: 10px;
+        top: 0;
+    }
+    
+    .text002 {
+        font-size: 20px;
+    }
+
+    #box02A{
+        width: 115px;
+        height: 15px;
+        top: 290px;
+        left: 0px;
+        z-index: 10000;
+    }
+
+    .box02 {
+        margin: 0 7px;
+    }
+
+    #box03A {
+        width: 230px;
+        height: 330px;
+        right: 0;
+        top: 100px;
+    }
+
+    #box03 {
+        top: 70px;
+        width: 230px;
+        height: 160px;
+        right: 0;
     }
 }
