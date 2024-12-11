@@ -1198,7 +1198,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     #menu_t {
         right: 80px;
     }
@@ -1207,7 +1207,7 @@ a:hover {
         margin-top: 200px;
         width: 300px;
         height: 790px;
-        background-color: rgb(77, 83, 88);
+        background-color: rgb(75, 94, 110);
     }
 
 }
