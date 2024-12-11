@@ -1190,10 +1190,6 @@ a:hover {
         height: 450px;
     }
 
-    #story {
-        margin: 0 auto;
-    }
-
     #G_logo {
         margin: 0 auto;
         width: 460px;
@@ -1202,7 +1198,16 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
+    #menu_t {
+        right: 80px;
+    }
 
+    #story {
+        margin-top: 200px;
+        width: 400px;
+        height: 790px;
+        background-color: rgb(77, 83, 88);
+    }
 
 }
