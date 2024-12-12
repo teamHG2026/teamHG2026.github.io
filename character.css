@@ -361,6 +361,7 @@ a:hover {
 
     #main-container {
         width: 400px;
+        left: 30px;
     }
 
     #chara_title_box {
