@@ -747,6 +747,10 @@ a:hover {
 
 @media screen and (max-width: 550px) {
 
+    #menu_t {
+        right: 60px;
+    }
+
     #box01 {
         top: 310px;
         width: 400px;
