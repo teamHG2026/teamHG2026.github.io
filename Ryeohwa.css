@@ -748,13 +748,13 @@ a:hover {
 @media screen and (max-width: 550px) {
 
     #box01 {
-        top: 0px;
-        transform: translate(-50%, 0%); /* 기존 정렬 유지 */
-        width: 90%; /* 뷰포트에 맞게 너비 축소 */
-        height: auto; /* 높이 유동적으로 조정 */
+        top: 310px;
+        width: 400px;
+        height: 450px;
     }
 
     #chara_illu {
+        top: 0px;
         width: 400px;
         height: 450px;
         left: 0px;
