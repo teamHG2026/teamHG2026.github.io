@@ -755,10 +755,9 @@ a:hover {
     }
 
     #chara_illu {
-
-        width: 90%;
-        max-width: 100%;
-        height: auto;
+        top: 50px;
+        width: 400px;
+        height: 450px;
         left: 0px;
         background: url("img/려화/려화LD\ \(ss\).png") 100%/cover no-repeat;
     }
