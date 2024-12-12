@@ -746,6 +746,22 @@ a:hover {
 }
 
 @media screen and (max-width: 550px) {
+
+    #box01 {
+        top: 310px;
+        width: 400px;
+        height: 450px;
+        background-color: rgb(116, 102, 67);
+    }
+
+    #chara_illu {
+        top: 0px;
+        width: 460px;
+        height: 450px;
+        left: 0px;
+        background: url("img/려화/려화LD\ \(s\).png") 100%/cover no-repeat;
+    }
+
     #skill {
         margin-top: 200px;
         width: 400px;
