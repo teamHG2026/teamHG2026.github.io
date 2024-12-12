@@ -751,7 +751,7 @@ a:hover {
         top: 310px;
         width: 400px;
         height: 450px;
-        left: 240px;
+        left: 230px;
     }
 
     #chara_illu {
@@ -765,6 +765,7 @@ a:hover {
         margin-top: 200px;
         width: 400px;
         height: 330px;
+        left: 20px;
     }
 
     #title02 {
@@ -818,6 +819,7 @@ a:hover {
         margin-top: 200px;
         width: 400px;
         height: 480px;
+        left: 20px;
     }
 
     #title03 {
