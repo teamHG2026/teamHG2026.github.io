@@ -798,4 +798,50 @@ a:hover {
         height: 160px;
         right: 0;
     }
+
+    #chara_team {
+        margin-top: 200px;
+        width: 400px;
+        height: 480px;
+    }
+
+    #title03 {
+        font-size: 28px;
+        width: 33%;
+    }
+
+    #chara_boxA{
+        top: 5px;
+    }
+    
+    .chara_box01 {
+        width: 200px; /* 너비 설정 */
+        height: 88px; /* 높이 설정 */
+    }
+
+    #chara_textA{
+        top: 25px;
+    }
+
+    .chara_text01 {
+        font-size: 15px;
+    }
+
+    #c_button_box {
+        margin-top: 5px;
+    }
+    
+    #d_text01 {
+        font-size: 15px;
+    }
+    
+    #d_button01 {
+        width: 130px;
+        height: 45px;
+        top: 50px;
+    }
+
+    #team {
+        margin-top: 100px;
+    }
 }

@@ -121,7 +121,7 @@ updateText();
 // 화면 크기 변경 시 텍스트 업데이트
 window.addEventListener("resize", updateText);
 
-//뷰 1030px 세계관
+//뷰 750px 세계관
 
 function updateText() {
     const textBox = document.getElementById("text01");
@@ -139,6 +139,42 @@ function updateText() {
                 항상 침착하고 표정의 변화가 크게없는 그녀이지만 <br>
                 화가 나면 근처의 공기는 견디기 힘들정도로 <br>
                 온도가 높아집니다</p>
+        `;
+    } else {
+        textBox.innerHTML = `
+            <p> 활발한 화산지역에서 온 려화는 화려하게 쌍검과 뜨거운 불을 사용하여 적을 정화하고 소멸시킵니다 <br>
+                팀의 최전방에 서서 팀을 이끌며 적을 강하고 빠르게 처치합니다 <br>
+                그 누구보다 책임감과 사명감이 강하여 한번 맡은 임무는 항상 잘 해결이 됩니다 <br>
+                항상 침착하고 표정의 변화가 크게없는 그녀이지만 <br>
+                화가 나면 근처의 공기는 견디기 힘들정도로 온도가 높아집니다</p>
+        `;
+    }
+}
+
+// 초기 실행
+updateText();
+
+// 화면 크기 변경 시 텍스트 업데이트
+window.addEventListener("resize", updateText);
+
+//뷰 550px 세계관
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 550) {
+        textBox.innerHTML = `
+            <p> 활발한 화산지역에서 온 려화는 화려하게 <br>
+                쌍검과 뜨거운 불을 사용하여 적을 <br>
+                정화하고 소멸시킵니다 <br>
+                팀의 최전방에 서서 팀을 이끌며 적을 강하고 <br>
+                빠르게 처치합니다 그 누구보다 <br>
+                책임감과 사명감이 강하여 한 번 맡은 <br>
+                임무는 항상 잘 해결이 됩니다 <br>
+                항상 침착하고 표정의 변화가 크게없는 <br>
+                그녀이지만  화가 나면 근처의 공기는 <br>
+                견디기 힘들정도로 온도가 높아집니다</p>
         `;
     } else {
         textBox.innerHTML = `
