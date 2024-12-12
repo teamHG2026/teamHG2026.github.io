@@ -751,6 +751,7 @@ a:hover {
         top: 310px;
         width: 400px;
         height: 450px;
+        background-color: rgb(116, 102, 67);
     }
 
     #chara_illu {
@@ -759,10 +760,6 @@ a:hover {
         height: 450px;
         left: 0px;
         background: url("img/려화/려화LD\ \(ss\).png") 100%/cover no-repeat;
-    }
-
-    #story {
-        margin-top: 100px;
     }
 
     #skill {
