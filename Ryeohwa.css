@@ -751,6 +751,9 @@ a:hover {
         top: 310px;
         width: 400px;
         height: 450px;
+
+        left: 50%; /* 가로 정렬 유지 */
+        transform: translate(-50%, 0); /* 기존 중심점 기준으로 조정 */
     }
 
     #chara_illu {
@@ -763,17 +766,12 @@ a:hover {
 
     #story {
         margin-top: 100px;
-
-        margin: 50px auto; /* 자동 정렬 */
-        width: 90%; /* 적응형 너비 */
     }
 
     #skill {
         margin-top: 200px;
         width: 400px;
         height: 330px;
-
-        margin: 100px auto; /* 자동 정렬 */
     }
 
     #title02 {
