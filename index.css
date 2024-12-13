@@ -1291,6 +1291,20 @@ a:hover {
         margin-top: 150px;
     }
 
+    #title03 {
+        position: absolute;
+        font-size: 40px;
+        margin: 0 auto;
+        text-align: center;
+        width: 210px;
+        top: 85px;
+        left: 50%; /* 가로 중앙 */
+        transform: translate(-50%, -50%); /* 위치 조정 */
+        z-index: 10000;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    }
+
     #A_button01 {
         width: 460px;
         height: 475px;
