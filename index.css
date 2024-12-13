@@ -1207,7 +1207,7 @@ a:hover {
     }
 
     #story {
-        left: 70px;
+        left: 60px;
         margin-top: 200px;
         width: 400px;
         height: 860px;
@@ -1224,7 +1224,7 @@ a:hover {
     }
     
     #gameEX {
-        left: 80px;
+        left: 50px;
         width: 460px;
         height: 2000px;
         margin-top: 150px;
@@ -1257,6 +1257,7 @@ a:hover {
     }
 
     #profile {
+        left: 20px;
         width: 460px;
         height: 735px;
         margin-top: 150px;
@@ -1330,6 +1331,7 @@ a:hover {
         width: 460px;
         height: 340px;
         margin-top: 150px;
+        left: 20px;
     }
 
     .swiper {
@@ -1343,6 +1345,7 @@ a:hover {
     }
 
     #made_in {
+        left: 20px;
         width: 460px;
         height: 300px;
         margin-top: 150px;
@@ -1356,6 +1359,7 @@ a:hover {
     }
 
     #team {
+        left: 30px;
         width: 460px;
         height: 2000px;
         margin-top: 150px;
@@ -1398,6 +1402,7 @@ a:hover {
     }
 
     #G_logo {
+        left: 30px;
         width: 460px;
         height: 200px;
         margin-top: 150px;
