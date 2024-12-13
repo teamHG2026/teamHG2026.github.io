@@ -1204,8 +1204,8 @@ a:hover {
     #logo {
         top: 6%;
         right: 4%;
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         z-index: 10000;
         background: url("img/TR.png") 100%/contain no-repeat;
     }
@@ -1296,7 +1296,7 @@ a:hover {
         font-size: 40px;
         margin: 0 auto;
         text-align: center;
-        width: 210px;
+        width: 190px;
         top: 85px;
         left: 50%; /* 가로 중앙 */
         transform: translate(-50%, -50%); /* 위치 조정 */
