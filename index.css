@@ -1201,6 +1201,15 @@ a:hover {
 
 @media screen and (max-width: 550px) {
 
+    #logo {
+        top: 6%;
+        right: 4%;
+        width: 60px;
+        height: 60px;
+        z-index: 10000;
+        background: url("img/TR.png") 100%/contain no-repeat;
+    }
+
     #box01 {
         padding-top: 0px;
         width: 400px;
@@ -1212,7 +1221,6 @@ a:hover {
         margin-top: 200px;
         width: 400px;
         height: 860px;
-        background-color: #363a46;
     }
 
     #s_title_box {
