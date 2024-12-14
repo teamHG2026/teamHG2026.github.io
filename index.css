@@ -332,7 +332,7 @@ a:hover {
     height: 280px;
     /* background-color: rgb(41, 47, 65); */
     opacity: 0; /* 처음에는 불투명도 0으로 설정 */
-    background: url("img/캡쳐/보스들.png") 100%/cover no-repeat;
+    background: url("img/캡쳐/탁월한\ 전술적\ 판단.png") 100%/cover no-repeat;
     transform: translateX(-100px); /* 처음 위치에서 50px 아래로 설정 */
     transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
 
@@ -412,6 +412,7 @@ a:hover {
     width: 460px;
     height: 280px;
     background-color: rgb(41, 47, 65);
+    background: url("img/캡쳐/독특한\ 게임\ 요소.png") 100%/cover no-repeat;
     opacity: 0; /* 처음에는 불투명도 0으로 설정 */
     transform: translateX(100px); /* 처음 위치에서 50px 아래로 설정 */
     transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
@@ -439,6 +440,7 @@ a:hover {
     width: 460px;
     height: 280px;
     background-color: rgb(41, 47, 65);
+    background: url("img/캡쳐/섬세한\ 스토리\ 텔링.png") 100%/cover no-repeat;
     opacity: 0; /* 처음에는 불투명도 0으로 설정 */
     transform: translateX(-100px); /* 처음 위치에서 50px 아래로 설정 */
     transition: opacity 1s ease, transform 1s ease; /* 1초 동안 애니메이션 */
@@ -1281,9 +1283,6 @@ a:hover {
     }
 }
 
-
-
-
 @media screen and (max-width: 550px) {
 
     #logo {
@@ -1313,10 +1312,12 @@ a:hover {
     #menu_t {
         display: none; /* 기본 메뉴 숨김 */
     }
+}
 
 
 
 
+@media screen and (max-width: 480px) {
 
     #box01 {
         padding-top: 0px;
