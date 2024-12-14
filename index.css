@@ -35,9 +35,9 @@ a:hover {
     right: 4%;
     width: 80px;
     height: 80px;
-    /* background-color: rgb(180, 42, 255); */
-    z-index: 10000;
+    z-index: 100001;
     background: url("img/TR.png") 100%/contain no-repeat;
+    cursor: pointer;
 }
 
 #menu_t {
@@ -109,6 +109,84 @@ a:hover {
     opacity: 0; /* 처음에는 버튼이 보이지 않도록 설정 */
     transition: opacity 1s ease; /* opacity 애니메이션 */
 }
+
+
+/* 체크박스 숨기기 */
+#active {
+    display: none; /* 화면에 표시되지 않도록 숨김 */
+}
+
+/* 로고 클릭 가능하도록 설정 */
+.menu-btn {
+    position: absolute;
+    width: 100%; /* 로고 전체를 클릭 가능 */
+    height: 100%;
+    cursor: pointer;
+    z-index: 10001; /* 다른 요소 위에 위치 */
+}
+
+/* 체크박스 활성화 시 메뉴 표시 */
+#active:checked ~ .wrapper {
+    right: 0; /* 화면 안으로 슬라이드 */
+}
+
+/* 기본 스타일 */
+#wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%; /* 숨긴 상태 */
+    width: 70%; /* 슬라이드 메뉴 너비 */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
+    transition: right 0.3s ease-in-out; /* 슬라이드 애니메이션 */
+    z-index: 9999;
+}
+
+/* 슬라이드 메뉴 기본 숨김 */
+.wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%; /* 기본적으로 화면에서 숨김 */
+    height: 100%;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#wrapper ul {
+    list-style: none; /* 불릿 포인트 제거 */
+    padding: 0; /* 불필요한 패딩 제거 */
+    margin: 0; /* 불필요한 마진 제거 */
+    text-align: right;
+}
+
+#wrapper ul li {
+    margin-bottom: 15px;
+    list-style: none; /* li에도 list-style:none 추가 */
+}
+
+#wrapper ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#wrapper ul li a:hover {
+    color: #f39c12; /* 호버 효과 */
+}
+
+/* 체크박스 활성화 시 */
+#active:checked ~ .wrapper {
+    right: 0; /* 화면 안으로 슬라이드 */
+}
+
+/* 배경 클릭 시 메뉴 닫히는 문제 방지 */
+#active:checked + .menu-btn {
+    pointer-events: none; /* 메뉴 버튼을 클릭할 수 없도록 설정 */
+}
+
 
 /* ------ 세계관 ------ */
 
@@ -1199,6 +1277,17 @@ a:hover {
     }
 }
 
+
+
+@media screen and (min-width: 550px) {
+    .wrapper {
+        display: none; /* 큰 화면에서는 기본 메뉴를 유지 */
+    }
+}
+
+
+
+
 @media screen and (max-width: 550px) {
 
     #logo {
@@ -1209,6 +1298,21 @@ a:hover {
         z-index: 10000;
         background: url("img/TR.png") 100%/contain no-repeat;
     }
+
+
+
+
+    .wrapper {
+        display: block;
+    }
+
+    #menu_t {
+        display: none; /* 기본 메뉴 숨김 */
+    }
+
+
+
+
 
     #box01 {
         padding-top: 0px;
@@ -1296,7 +1400,7 @@ a:hover {
         font-size: 40px;
         margin: 0 auto;
         text-align: center;
-        width: 190px;
+        width: 180px;
         top: 85px;
         left: 50%; /* 가로 중앙 */
         transform: translate(-50%, -50%); /* 위치 조정 */
