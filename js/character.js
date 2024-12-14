@@ -34,6 +34,12 @@ $('#logo').on('click', function(){
     }
 });
 
+//550 뷰 메뉴바 슬라이드
+document.getElementById("logo").addEventListener("click", function () {
+    const activeCheckbox = document.getElementById("active");
+    activeCheckbox.checked = !activeCheckbox.checked; // 체크박스 상태 토글
+});
+
 //팀 로고 박스 스크롤 애니메이션
 
 window.addEventListener('scroll', function() {
