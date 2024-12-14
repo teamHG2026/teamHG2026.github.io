@@ -456,9 +456,9 @@ a:hover {
 
 
     #wrapper ul {
-        list-style: none; /* 불릿 포인트 제거 */
-        padding: 0; /* 불필요한 패딩 제거 */
-        margin: 0; /* 불필요한 마진 제거 */
+        list-style: none; /* 기존 불릿 제거 */
+        padding: 0; /* 패딩 제거 */
+        margin: 0; /* 마진 제거 */
         text-align: right;
     }
 
