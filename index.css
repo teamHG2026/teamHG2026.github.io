@@ -710,7 +710,7 @@ a:hover {
 
 #gameIMG_text01 {
     position: relative;
-    width: 60%;
+    width: 80%;
     font-size: 15px;
     margin-top: 15px;
     color: rgb(255, 255, 255);
@@ -1183,6 +1183,21 @@ a:hover {
         width: 460px;
         height: 280px;
     }
+
+
+    .swiper-slide:nth-child(1) img {
+        content: url("img/캡쳐/슬라이드1\ \(m\).png");
+      }
+    
+      .swiper-slide:nth-child(2) img {
+        content: url("img/slide2-small.jpg");
+      }
+    
+      .swiper-slide:nth-child(3) img {
+        content: url("img/slide3-small.jpg");
+      }
+
+
 
     #gameIMG_text01 {
         left: 0px;
