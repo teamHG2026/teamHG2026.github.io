@@ -34,6 +34,13 @@ $('#logo').on('click', function(){
     }
 });
 
+//550 뷰 메뉴바 슬라이드
+document.getElementById("logo").addEventListener("click", function () {
+    const activeCheckbox = document.getElementById("active");
+    activeCheckbox.checked = !activeCheckbox.checked; // 체크박스 상태 토글
+});
+
+
 //각 박스 애니메이션
 
 window.addEventListener('scroll', function() {
@@ -88,42 +95,142 @@ window.addEventListener('scroll', function() {
     });
 });
 
-    // DOM이 로드된 후 실행
-    document.addEventListener('DOMContentLoaded', function () {
-    // 이미지 변경할 대상 요소
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    let textContent = `<p> 넓은 들판에서 온 알리는 밝은 눈과 뛰어난 활 솜씨로 멀리 있는 적을 처치하고 전술에 능합니다 <br>
+        신기하거나 흥미로운 것에 많은 관심과 남들과 내기하는 것을 좋아하는 활발한 장난꾸러기입니다 <br>
+        그에 대해서 알려진 것은 별로 없지만 그를 억압하거나 강요하면 좋지 않은 결말을 맞이한다는 건 확실합니다 <br>
+        가볍고 장난기가 많은 그이지만 전장에서는 그 누구 못지않게 진지하며 체계적으로 팀을 이끌어갑니다</p>`;
+
+    // 화면 크기 1250px 이하
+    if (screenWidth <= 1250 && screenWidth > 750) {
+        textContent = `<p> 넓은 들판에서 온 알리는 밝은 눈과 뛰어난 활 솜씨로 멀리 있는 <br>
+            적을 처치하고 전술에 능합니다 <br>
+            신기하거나 흥미로운 것에 많은 관심과 남들과 내기하는 것을 좋아하는 <br>
+            활발한 장난꾸러기입니다 <br>
+            그에 대해서 알려진 것은 별로 없지만 그를 억압하거나 강요하면 <br>
+            좋지 않은 결말을 맞이한다는 건 확실합니다 <br>
+            가볍고 장난기가 많은 그이지만 전장에서는 그 누구 못지않게 진지하며 <br>
+            체계적으로 팀을 이끌어갑니다</p>`;
+    }
+    // 화면 크기 750px 이하
+    else if (screenWidth <= 750 && screenWidth > 550) {
+        textContent = `<p> 넓은 들판에서 온 알리는 밝은 눈과 뛰어난 활 솜씨로 <br> 
+            멀리 있는 적을 처치하고 전술에 능합니다 <br>
+            신기하거나 흥미로운 것에 많은 관심과 남들과 내기하는 <br>
+            것을 좋아하는 활발한 장난꾸러기입니다 <br>
+            그에 대해서 알려진 것은 별로 없지만 그를 억압하거나 <br>
+            강요하면 좋지 않은 결말을 맞이한다는 건 확실합니다 <br>
+            가볍고 장난기가 많은 그이지만 전장에서는 <br>
+            그 누구 못지않게 진지하며 체계적으로 팀을 <br>
+            이끌어갑니다</p>`;
+    }
+    // 화면 크기 550px 이하
+    else if (screenWidth <= 550) {
+        textContent = `<p> 넓은 들판에서 온 알리는 밝은 눈과 뛰어난 활 솜씨로 <br>
+            멀리 있는 적을 처치하고 전술에 능합니다 <br>
+            신기하거나 흥미로운 것에 많은 관심과 남들과 내기하는 <br>
+            것을 좋아하는 활발한 장난꾸러기입니다 <br>
+            그에 대해서 알려진 것은 별로 없지만 그를 억압하거나 <br>
+            강요하면 좋지 않은 결말을 맞이한다는 건 확실합니다 <br>
+            가볍고 장난기가 많은 그이지만 전장에서는 <br>
+            그 누구 못지않게 진지하며 체계적으로 팀을 <br>
+            이끌어갑니다</p>`;
+    }
+
+    // 텍스트 업데이트
+    textBox.innerHTML = textContent;
+}
+
+// 스킬 이벤트 리스너 설정
+function setupSkillListeners() {
     const box03 = document.querySelector('#box03');
-    const text02 = document.querySelector('#text02'); // 텍스트 변경할 요소
+    const text02 = document.querySelector('#text02');
 
-    // 초기 상태 설정
-    box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    box03.style.backgroundSize = 'contain';
-    box03.style.backgroundRepeat = 'no-repeat';
-    box03.style.backgroundPosition = 'center';
-    text02.innerHTML = `
-        <h1><span class="text002">척도</span></h1>
-        <br>
-        후방으로 도약하며 화살을 쏘아 200%의 <br>
-        피해를 입힌다
-    `;
-
-    // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">척도</span></h1>
+                <br>
+                후방으로 도약하며 화살을 쏘아 <br>
+                200%의 피해를 입힌다
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">척도</span></h1>
+                <br>
+                후방으로 도약하며 화살을 쏘아 <br>
+                200%의 피해를 입힌다
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">척도</span></h1>
+                <br>
+                후방으로 도약하며 화살을 쏘아 200%의 피해를 입힌다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">척도</span></h1>
+                <br>
+                후방으로 도약하며 화살을 쏘아 200%의 <br>
+                피해를 입힌다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">척도</span></h1>
-            <br>
-            후방으로 도약하며 화살을 쏘아 200%의 <br>
-            피해를 입힌다
-        `;
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">화살주의보</span></h1>
+                <br>
+                자신이 서있는 위치에 화살비를 <br>
+                내려 이동속도 감소효과와 <br>
+                100%의 피해를 입힌다
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">화살주의보</span></h1>
+                <br>
+                자신이 서있는 위치에 화살비를 <br>
+                내려 이동속도 감소효과와 <br>
+                100%의 피해를 입힌다
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">화살주의보</span></h1>
+                <br>
+                자신이 서있는 위치에 화살비를 내려<br>
+                이동속도 감소효과와 100%의 피해를 <br>
+                입힌다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">화살주의보</span></h1>
+                <br>
+                자신이 서있는 위치에 화살비를 내려 <br>
+                이동속도 감소효과와 100%의 피해를 <br>
+                입힌다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">화살주의보</span></h1>
-            <br>
-            자신이 서있는 위치에 화살비를 내리게 해 <br>
-            이동속도 감소효과와 100%의 피해를 입힌다
-        `;
     });
+}
+
+// 초기화 함수
+function initialize() {
+    setupSkillListeners();
+    updateText();
+}
+
+// 화면 크기 변경 시 텍스트 업데이트 및 스킬 이벤트 리스너 초기화
+window.addEventListener('resize', function () {
+    setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
+    updateText(); // 텍스트도 업데이트
 });
+
+// 초기화 실행
+initialize();

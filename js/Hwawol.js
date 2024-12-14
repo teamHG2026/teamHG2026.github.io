@@ -34,6 +34,13 @@ $('#logo').on('click', function(){
     }
 });
 
+//550 뷰 메뉴바 슬라이드
+document.getElementById("logo").addEventListener("click", function () {
+    const activeCheckbox = document.getElementById("active");
+    activeCheckbox.checked = !activeCheckbox.checked; // 체크박스 상태 토글
+});
+
+
 //각 박스 애니메이션
 
 window.addEventListener('scroll', function() {
@@ -88,45 +95,145 @@ window.addEventListener('scroll', function() {
     });
 });
 
-    // DOM이 로드된 후 실행
-    document.addEventListener('DOMContentLoaded', function () {
-    // 이미지 변경할 대상 요소
+
+
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    let textContent = `<p> 산속 호랑이가 많은 곳에서 온 화월이는 커다란 검과 단단한 방패를 사용하여 적을 막고 큰 치명타를 입힙니다 <br>
+                오랫동안 산속에 살아 온 그녀는 생활력이 높아 어느 곳에 가든 잘 지내는 모습을 보여줍니다 <br>
+                장난꾸러기 팀원들 때문에 항상 골머리를 앓으며 사고 친 것을 수습하는 등 뒤처리 담당이기도 합니다 <br>
+                그녀의 단단하고 큰 방패로 적을 해치며 앞으로 나아가는 모습은 용맹하며 팀의 사기를 높여줍니다</p>`;
+
+    // 화면 크기 1250px 이하
+    if (screenWidth <= 1250 && screenWidth > 750) {
+        textContent = `<p> 산속 호랑이가 많은 곳에서 온 화월이는 커다란 검과 단단한 방패를 사용하여 <br>
+                적을 막고 큰 치명타를 입힙니다 <br>
+                오랫동안 산속에 살아 온 그녀는 생활력이 높아 어느 곳에 가든 <br>
+                잘 지내는 모습을 보여줍니다 <br>
+                장난꾸러기 팀원들 때문에 항상 골머리를 앓으며 사고 친 것을 수습하는 등 <br>
+                뒤처리 담당이기도 합니다 <br>
+                그녀의 단단하고 큰 방패로 적을 해치며 앞으로 나아가는 모습은 <br>
+                용맹하며 팀의 사기를 높여줍니다</p>`;
+    }
+    // 화면 크기 750px 이하
+    else if (screenWidth <= 750 && screenWidth > 550) {
+        textContent = `<p> 산속 호랑이가 많은 곳에서 온 화월이는 커다란 검과 <br>
+                단단한 방패를 사용하여 적을 막고 큰 치명타를 입힙니다 <br>
+                오랫동안 산속에 살아 온 그녀는 생활력이 높아 어느 곳에 <br>
+                가든 잘 지내는 모습을 보여줍니다 <br>
+                장난꾸러기 팀원들 때문에 항상 골머리를 앓으며 사고 <br>
+                친 것을 수습하는 등 뒤처리 담당이기도 합니다 <br>
+                그녀의 단단하고 큰 방패로 적을 해치며 앞으로 나아가는 <br>
+                모습은 용맹하며 팀의 사기를 높여줍니다</p>`;
+    }
+    // 화면 크기 550px 이하
+    else if (screenWidth <= 550) {
+        textContent = `<p> 산속 호랑이가 많은 곳에서 온 화월이는 커다란 검과 <br>
+                단단한 방패를 사용하여 적을 막고 큰 치명타를 입힙니다 <br>
+                오랫동안 산속에 살아 온 그녀는 생활력이 높아 어느 곳에 <br>
+                가든 잘 지내는 모습을 보여줍니다 <br>
+                장난꾸러기 팀원들 때문에 항상 골머리를 앓으며 사고 <br>
+                친 것을 수습하는 등 뒤처리 담당이기도 합니다 <br>
+                그녀의 단단하고 큰 방패로 적을 해치며 앞으로 나아가는 <br>
+                모습은 용맹하며 팀의 사기를 높여줍니다</p>`;
+    }
+
+    // 텍스트 업데이트
+    textBox.innerHTML = textContent;
+}
+
+
+// 스킬 이벤트 리스너 설정
+function setupSkillListeners() {
     const box03 = document.querySelector('#box03');
-    const text02 = document.querySelector('#text02'); // 텍스트 변경할 요소
+    const text02 = document.querySelector('#text02');
 
-    // 초기 상태 설정
-    box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    box03.style.backgroundSize = 'contain';
-    box03.style.backgroundRepeat = 'no-repeat';
-    box03.style.backgroundPosition = 'center';
-    text02.innerHTML = `
-        <h1><span class="text002">접근 금지</span></h1>
-        <br>
-        공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
-        적에게 100% 피해를 입히고 3초간 <br>
-        기절시킨다 <br>
-        스킬강화 : 피해량 증가(10%, 20%, 30%)
-    `;
-
-    // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">접근 금지</span></h1>
+                <br>
+                공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
+                적에게 100% 피해를 입히고 3초간 <br>
+                기절시킨다 <br>
+                스킬강화 : 피해량 증가(10%, 20%, 30%)
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">접근 금지</span></h1>
+                <br>
+                공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
+                적에게 100% 피해를 입히고 3초간 <br>
+                기절시킨다 <br>
+                스킬강화 : 피해량 증가(10%, 20%, 30%)
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">접근 금지</span></h1>
+                <br>
+                공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
+                적에게 100% 피해를 입히고 3초간 <br>
+                기절시킨다 <br>
+                스킬강화 : 피해량 증가(10%, 20%, 30%)
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">접근 금지</span></h1>
+                <br>
+                공중에 뜬 상태에서 힘껏 내려쳐 <br>
+                공격한다 <br>
+                적에게 100% 피해를 입히고 3초간 <br>
+                기절시킨다 <br>
+                스킬강화 : 피해량 증가(10%, 20%, 30%)
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">접근 금지</span></h1>
-            <br>
-            공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
-            적에게 100% 피해를 입히고 3초간 <br>
-            기절시킨다 <br>
-            스킬강화 : 피해량 증가(10%, 20%, 30%)
-        `;
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">철갑</span></h1>
+                <br>
+                방패로 자신의 몸을 지켜 피해를 막는다
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">철갑</span></h1>
+                <br>
+                방패로 자신의 몸을 지켜 피해를 막는다
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">철갑</span></h1>
+                <br>
+                방패로 자신의 몸을 지켜 피해를 막는다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">철갑</span></h1>
+                <br>
+                방패로 자신의 몸을 지켜 피해를 막는다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">철갑</span></h1>
-            <br>
-            방패로 자신의 몸을 지켜 피해를 막는다
-        `;
     });
+}
+
+// 초기화 함수
+function initialize() {
+    setupSkillListeners();
+    updateText();
+}
+
+// 화면 크기 변경 시 텍스트 업데이트 및 스킬 이벤트 리스너 초기화
+window.addEventListener('resize', function () {
+    setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
+    updateText(); // 텍스트도 업데이트
 });
+
+// 초기화 실행
+initialize();

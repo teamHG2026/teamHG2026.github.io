@@ -34,6 +34,13 @@ $('#logo').on('click', function(){
     }
 });
 
+//550 뷰 메뉴바 슬라이드
+document.getElementById("logo").addEventListener("click", function () {
+    const activeCheckbox = document.getElementById("active");
+    activeCheckbox.checked = !activeCheckbox.checked; // 체크박스 상태 토글
+});
+
+
 //각 박스 애니메이션
 
 window.addEventListener('scroll', function() {
@@ -88,44 +95,146 @@ window.addEventListener('scroll', function() {
     });
 });
 
-    // DOM이 로드된 후 실행
-    document.addEventListener('DOMContentLoaded', function () {
-    // 이미지 변경할 대상 요소
+
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    let textContent = `<p> 산속 작은 마을에서 온 레비는 부적과 장승을 사용하여 적에게 디버프를 걸며 팀원들을 서포트해줍니다 <br>
+                어릴 때부터 장승과 부적을 가지고 놀며 항상 만지다 보니 무기 친화력이 가장 높습니다 <br>
+                그녀가 가지고 있는 부적은 스스로 만든 부적이라 어느 부적보다 효과가 강력합니다 <br>
+                항상 밝고 무서운 게 없는 그녀는 팀을 이끄는 것에 조금 부담감이 있지만 그 누구보다 노력합니다</p>`;
+
+    // 화면 크기 1250px 이하
+    if (screenWidth <= 1250 && screenWidth > 750) {
+        textContent = `<p> 산속 작은 마을에서 온 레비는 부적과 장승을 <br>
+                사용하여 적에게 디버프를 걸며 팀원들을 서포트해줍니다 <br>
+                어릴 때부터 장승과 부적을 가지고 놀며 항상 만지다 보니 무기 친화력이 가장 높습니다 <br>
+                그녀가 가지고 있는 부적은 스스로 만든 부적이라 어느 부적보다 효과가 강력합니다 <br>
+                항상 밝고 무서운 게 없는 그녀는 팀을 이끄는 것에 조금 부담감이 있지만 <br>
+                그 누구보다 노력합니다</p>`;
+    }
+    // 화면 크기 750px 이하
+    else if (screenWidth <= 750 && screenWidth > 550) {
+        textContent = `<p> 산속 작은 마을에서 온 레비는 부적과 장승을 사용하여 <br>
+                적에게 디버프를 걸며 팀원들을 서포트해줍니다 <br>
+                어릴 때부터 장승과 부적을 가지고 놀며 항상 만지다 보니 무기 친화력이 가장 높습니다 <br>
+                그녀가 가지고 있는 부적은 스스로 만든 부적이라 <br>
+                어느 부적보다 효과가 강력합니다 <br>
+                항상 밝고 무서운 게 없는 그녀는 팀을 이끄는 것에 <br>
+                조금 부담감이 있지만 그 누구보다 노력합니다</p>`;
+    }
+    // 화면 크기 550px 이하
+    else if (screenWidth <= 550) {
+        textContent = `<p> 산속 작은 마을에서 온 레비는 부적과 장승을 사용하여 <br>
+                적에게 디버프를 걸며 팀원들을 서포트해줍니다 <br>
+                어릴 때부터 장승과 부적을 가지고 놀며 항상 <br>
+                만지다 보니 무기 친화력이 가장 높습니다 <br>
+                그녀가 가지고 있는 부적은 스스로 만든 부적이라 <br>
+                어느 부적보다 효과가 강력합니다 <br>
+                항상 밝고 무서운 게 없는 그녀는 팀을 이끄는 것에 <br>
+                조금 부담감이 있지만 그 누구보다 노력합니다</p>`;
+    }
+
+    // 텍스트 업데이트
+    textBox.innerHTML = textContent;
+}
+
+
+
+
+// 스킬 이벤트 리스너 설정
+function setupSkillListeners() {
     const box03 = document.querySelector('#box03');
-    const text02 = document.querySelector('#text02'); // 텍스트 변경할 요소
+    const text02 = document.querySelector('#text02');
 
-    // 초기 상태 설정
-    box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    box03.style.backgroundSize = 'contain';
-    box03.style.backgroundRepeat = 'no-repeat';
-    box03.style.backgroundPosition = 'center';
-    text02.innerHTML = `
-        <h1><span class="text002">낙인</span></h1>
-        <br>
-        부적을 사용하여 저주를 내린다 <br>
-        매 초마다 1씩 대미지를 주고 5초 뒤 부적이 터지며 100% 피해를 추가로 입힌다 <br>
-        효과가 지속될동안 이속이 느려진다
-    `;
-
-    // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">낙인</span></h1>
+                <br>
+                부적을 사용하여 저주를 내린다 <br>
+                매 초마다 1씩 대미지를 주고 5초 뒤 <br>
+                부적이 터지며 100% 피해를 <br>
+                추가로 입힌다
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">낙인</span></h1>
+                <br>
+                부적을 사용하여 저주를 내린다 <br>
+                매 초마다 1씩 대미지를 주고 5초 뒤 <br>
+                부적이 터지며 100% 피해를 <br>
+                추가로 입힌다
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">낙인</span></h1>
+                <br>
+                부적을 사용하여 저주를 내린다 <br>
+                매 초마다 1씩 대미지를 주고 5초 뒤 <br>
+                부적이 터지며 100% 피해를 추가로 <br>
+                입힌다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">낙인</span></h1>
+                <br>
+                부적을 사용하여 저주를 내린다 <br>
+                매 초마다 1씩 대미지를 주고 5초 뒤 <br>
+                부적이 터지며 100% 피해를 추가로 <br>
+                입힌다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">낙인</span></h1>
-            <br>
-            부적을 사용하여 저주를 내린다 <br>
-            매 초마다 1씩 대미지를 주고 5초 뒤 부적이 터지며 100% 피해를 추가로 입힌다 <br>
-            효과가 지속될동안 이속이 느려진다
-        `;
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">혼령인도</span></h1>
+                <br>
+                장승을 소환하여 주변의 적에게 <br>
+                피해를 주고 장승쪽으로 끌어당긴다
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">혼령인도</span></h1>
+                <br>
+                장승을 소환하여 주변의 적에게 <br>
+                피해를 주고 장승쪽으로 끌어당긴다
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">혼령인도</span></h1>
+                <br>
+                장승을 소환하여 주변의 적에게 <br>
+                피해를 주고 장승쪽으로 끌어당긴다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">혼령인도</span></h1>
+                <br>
+                장승을 소환하여 주변의 적에게 <br>
+                피해를 주고 장승쪽으로 끌어당긴다
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">혼령인도</span></h1>
-            <br>
-            장승을 소환하여 주변의 적에게 피해를 주고<br>
-            장승쪽으로 끌어당긴다
-        `;
     });
+}
+
+// 초기화 함수
+function initialize() {
+    setupSkillListeners();
+    updateText();
+}
+
+// 화면 크기 변경 시 텍스트 업데이트 및 스킬 이벤트 리스너 초기화
+window.addEventListener('resize', function () {
+    setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
+    updateText(); // 텍스트도 업데이트
 });
+
+// 초기화 실행
+initialize();

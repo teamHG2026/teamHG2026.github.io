@@ -34,6 +34,13 @@ $('#logo').on('click', function(){
     }
 });
 
+//550 뷰 메뉴바 슬라이드
+document.getElementById("logo").addEventListener("click", function () {
+    const activeCheckbox = document.getElementById("active");
+    activeCheckbox.checked = !activeCheckbox.checked; // 체크박스 상태 토글
+});
+
+
 //각 박스 애니메이션
 
 window.addEventListener('scroll', function() {
@@ -88,48 +95,155 @@ window.addEventListener('scroll', function() {
     });
 });
 
-    // DOM이 로드된 후 실행
-    document.addEventListener('DOMContentLoaded', function () {
-    // 이미지 변경할 대상 요소
+
+
+
+function updateText() {
+    const textBox = document.getElementById("text01");
+    const screenWidth = window.innerWidth;
+
+    let textContent = `<p> 어디선가 나타난 하늘비는 평소에는 작은 몸으로 돌아다니며 도깨비 불을 사용하지만 적을 막을 힘이 <br>
+                부족해질 때는 어른 모습으로 변하여 거대한 솥뚜껑과 방망이를 사용하여 적을 공격하고 적의 공격을 막습니다 <br>
+                그녀가 들고 있는 솥뚜껑은 단단하여 특수한 방법을 사용하지 않는 이상 무슨 짓을 하던지 부서지지 않습니다 <br>
+                장난스럽고 제멋대로이지만 그녀가 앞에서 적을 막으며 싸우는 모습을 보면 <br>
+                그 누구보다 든든합니다</p>`;
+
+    // 화면 크기 1250px 이하
+    if (screenWidth <= 1250 && screenWidth > 750) {
+        textContent = `<p> 어디선가 나타난 하늘비는 평소에는 작은 몸으로 돌아다니며 도깨비 불을 사용하지만 <br>
+                적을 막을 힘이 부족해질 때는 어른 모습으로 변하여 거대한 솥뚜껑과 방망이를 <br>
+                사용하여 적을 공격하고 적의 공격을 막습니다 <br>
+                그녀가 들고 있는 솥뚜껑은 단단하여 특수한 방법을 사용하지 않는 이상 <br>
+                무슨 짓을 하던지 부서지지 않습니다 <br>
+                장난스럽고 제멋대로이지만 그녀가 앞에서 적을 막으며 싸우는 모습을 보면 <br>
+                그 누구보다 든든합니다</p>`;
+    }
+    // 화면 크기 750px 이하
+    else if (screenWidth <= 750 && screenWidth > 550) {
+        textContent = `<p> 어디선가 나타난 하늘비는 평소에는 작은 몸으로 <br>
+                돌아다니며 도깨비 불을 사용하지만 적을 막을 힘이 <br>
+                부족해질 때는 어른 모습으로 변하여 거대한 솥뚜껑과 <br>
+                방망이를 사용하여 적을 공격하고 적의 공격을 막습니다 <br>
+                그녀가 들고 있는 솥뚜껑은 단단하여 특수한 방법을 <br>
+                사용하지 않는 이상 무슨 짓을 하던지 부서지지 않습니다 <br>
+                장난스럽고 제멋대로이지만 그녀가 앞에서 적을 막으며 <br>
+                싸우는 모습을 보면 그 누구보다 든든합니다</p>`;
+    }
+    // 화면 크기 550px 이하
+    else if (screenWidth <= 550) {
+        textContent = `<p> 어디선가 나타난 하늘비는 평소에는 작은 몸으로 <br>
+                돌아다니며 도깨비 불을 사용하지만 적을 막을 힘이 <br>
+                부족해질 때는 어른 모습으로 변하여 거대한 솥뚜껑과 <br>
+                방망이를 사용하여 적을 공격하고 적의 공격을 막습니다 <br>
+                그녀가 들고 있는 솥뚜껑은 단단하여 특수한 방법을 <br>
+                사용하지 않는 이상 무슨 짓을 하던지 부서지지 않습니다 <br>
+                장난스럽고 제멋대로이지만 그녀가 앞에서 적을 막으며 <br>
+                싸우는 모습을 보면 그 누구보다 든든합니다</p>`;
+    }
+
+    // 텍스트 업데이트
+    textBox.innerHTML = textContent;
+}
+
+
+// 스킬 이벤트 리스너 설정
+function setupSkillListeners() {
     const box03 = document.querySelector('#box03');
-    const text02 = document.querySelector('#text02'); // 텍스트 변경할 요소
+    const text02 = document.querySelector('#text02');
 
-    // 초기 상태 설정
-    box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-    box03.style.backgroundSize = 'contain';
-    box03.style.backgroundRepeat = 'no-repeat';
-    box03.style.backgroundPosition = 'center';
-    text02.innerHTML = `
-        <h1><span class="text002">장난인데</span></h1>
-        <br>
-        일반 : 도깨비불을 던져 100%의 데미지를 <br> 
-        입히고 뒤로 3보 도약한다 <br>
-        분노 : 솥뚜껑으로 내려쳐 100%의 피해를 <br>
-        입히고 3초간 도발한다
-    `;
-
-    // 이벤트 리스너 추가
     document.querySelector('.box02.skill').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">장난인데</span></h1>
+                <br>
+                일반 : 도깨비불을 던져 100%의 <br> 
+                데미지를 입히고 뒤로 3보 도약한다 <br>
+                분노 : 솥뚜껑으로 내려쳐 100%의 <br>
+                피해를 입히고 3초간 도발한다 </p>
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">장난인데</span></h1>
+                <br>
+                일반 : 도깨비불을 던져 100%의 <br> 
+                데미지를 입히고 뒤로 3보 도약한다 <br>
+                분노 : 솥뚜껑으로 내려쳐 100%의 <br>
+                피해를 입히고 3초간 도발한다 </p>
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">장난인데</span></h1>
+                <br>
+                일반 : 도깨비불을 던져 100%의 <br> 
+                데미지를 입히고 뒤로 3보 도약한다 <br>
+                분노 : 솥뚜껑으로 내려쳐 100%의 <br>
+                피해를 입히고 3초간 도발한다 </p>
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">장난인데</span></h1>
+                <br>
+                일반 : 도깨비불을 던져 100%의 <br> 
+                데미지를 입히고 뒤로 3보 도약한다 <br>
+                분노 : 솥뚜껑으로 내려쳐 100%의 <br>
+                피해를 입히고 3초간 도발한다 </p>
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">장난인데</span></h1>
-            <br>
-            일반 : 도깨비불을 던져 100%의 데미지를 <br> 
-            입히고 뒤로 3보 도약한다 <br>
-            분노 : 솥뚜껑으로 내려쳐 100%의 피해를 <br>
-            입히고 3초간 도발한다
-        `;
     });
 
     document.querySelector('.box02.skill2').addEventListener('click', function () {
+        if (window.innerWidth <= 550) {
+            text02.innerHTML = `
+                <h1><span class="text002">안 맞을 거야</span></h1>
+                <br>
+                일반 : 도깨비불을 하나 희생시키며 피해를 <br>
+                1회 막는다 (20초마다 하나 생성) <br>
+                분노 : 솥뚜껑을 강화해 모든 피해를 5초 <br>
+                동안 막는다
+            `;
+        } else if (window.innerWidth <= 750) {
+            text02.innerHTML = `
+                <h1><span class="text002">안 맞을 거야</span></h1>
+                <br>
+                일반 : 도깨비불을 하나 희생시키며 피해를 <br>
+                1회 막는다 (20초마다 하나 생성) <br>
+                분노 : 솥뚜껑을 강화해 모든 피해를 5초 <br>
+                동안 막는다
+            `;
+        } else if (window.innerWidth <= 1250) {
+            text02.innerHTML = `
+                <h1><span class="text002">안 맞을 거야</span></h1>
+                <br>
+                일반 : 도깨비불을 하나 희생시키며 피해를 <br>
+                1회 막는다 (20초마다 하나 생성) <br>
+                분노 : 솥뚜껑을 강화해 모든 피해를 5초 <br>
+                동안 막는다
+            `;
+        } else {
+            text02.innerHTML = `
+                <h1><span class="text002">안 맞을 거야</span></h1>
+                <br>
+                일반 : 도깨비불을 하나 희생시키며 <br>
+                피해를 1회 막는다 (20초마다 하나 생성) <br>
+                분노 : 솥뚜껑을 강화해 모든 피해를 5초동안 막는다<br>
+            `;
+        }
         box03.style.backgroundImage = 'url("img/스킬/준비중.png")';
-        text02.innerHTML = `
-            <h1><span class="text002">안 맞을 거야</span></h1>
-            <br>
-            일반 : 도깨비불을 하나 희생시키며 피해를 <br>
-            1회 막는다 (20초마다 하나 생성) <br>
-            분노 : 솥뚜껑을 강화해 모든 피해를 5초동안 <br>
-            막는다
-        `;
     });
+}
+
+// 초기화 함수
+function initialize() {
+    setupSkillListeners();
+    updateText();
+}
+
+// 화면 크기 변경 시 텍스트 업데이트 및 스킬 이벤트 리스너 초기화
+window.addEventListener('resize', function () {
+    setupSkillListeners(); // 화면 크기가 변경되면 리스너를 다시 초기화
+    updateText(); // 텍스트도 업데이트
 });
+
+// 초기화 실행
+initialize();
