@@ -55,7 +55,7 @@ a:hover {
     position: absolute;
     font-size: 55px;
     text-align: center;
-    width: 190px;
+    width: 150px;
     top: 32px;
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, 0%); /* 위치 조정 */
