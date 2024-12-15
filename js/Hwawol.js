@@ -183,8 +183,7 @@ function setupSkillListeners() {
             text02.innerHTML = `
                 <h1><span class="text002">접근 금지</span></h1>
                 <br>
-                공중에 뜬 상태에서 힘껏 내려쳐 <br>
-                공격한다 <br>
+                공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
                 적에게 100% 피해를 입히고 3초간 <br>
                 기절시킨다 <br>
                 스킬강화 : 피해량 증가(10%, 20%, 30%)
