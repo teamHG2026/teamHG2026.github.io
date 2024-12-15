@@ -197,10 +197,10 @@ function setupSkillListeners() {
             text02.innerHTML = `
                 <h1><span class="text002">안 맞을 거야</span></h1>
                 <br>
-                일반 : 도깨비불을 하나 희생시키며 피해를 <br>
-                1회 막는다 (20초마다 하나 생성) <br>
-                분노 : 솥뚜껑을 강화해 모든 피해를 5초 <br>
-                동안 막는다
+                일반 : 도깨비불을 하나 희생시키며 <br>
+                피해를  1회 막는다 <br>
+                분노 : 솥뚜껑을 강화해 모든 <br>
+                피해를 5초동안 막는다
             `;
         } else if (window.innerWidth <= 750) {
             text02.innerHTML = `

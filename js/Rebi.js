@@ -155,8 +155,8 @@ function setupSkillListeners() {
                 <h1><span class="text002">낙인</span></h1>
                 <br>
                 부적을 사용하여 저주를 내린다 <br>
-                매 초마다 1씩 대미지를 주고 5초 뒤 <br>
-                부적이 터지며 100% 피해를 <br>
+                매 초마다 1씩 대미지를 주고 5초 <br>
+                뒤 부적이 터지며 100% 피해를 <br>
                 추가로 입힌다
             `;
         } else if (window.innerWidth <= 750) {
@@ -196,7 +196,8 @@ function setupSkillListeners() {
                 <h1><span class="text002">혼령인도</span></h1>
                 <br>
                 장승을 소환하여 주변의 적에게 <br>
-                피해를 주고 장승쪽으로 끌어당긴다
+                피해를 주고 장승쪽으로 <br>
+                끌어당긴다
             `;
         } else if (window.innerWidth <= 750) {
             text02.innerHTML = `

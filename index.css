@@ -89,7 +89,18 @@ a:hover {
     padding-top: 0px;
     width: 100%;
     height: 800px;
-    background-color: rgb(98, 128, 136);
+    overflow: hidden; /* 박스 크기를 초과하는 부분 숨기기 */
+}
+
+
+#box01 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #home {
@@ -1060,8 +1071,6 @@ a:hover {
     }
 
     #box01 {
-        padding-top: 0px;
-        width: 100%;
         height: 800px;
     }
 
@@ -1190,11 +1199,11 @@ a:hover {
       }
     
       .swiper-slide:nth-child(2) img {
-        content: url("img/slide2-small.jpg");
+        content: url("img/캡쳐/슬라이드2\ \(m\).png");
       }
     
       .swiper-slide:nth-child(3) img {
-        content: url("img/slide3-small.jpg");
+        content: url("img/캡쳐/슬라이드3\ \(m\).png");
       }
 
 

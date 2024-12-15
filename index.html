@@ -44,7 +44,13 @@
 
 
         <div id="home"><a href="https://teamhg2026.github.io/index"><h1>Hwagak</h1></a></div>
-        <div id="box01"></div>
+        <div id="box01">
+            <video autoplay loop muted playsinline>
+                <source src="img/메인 영상.mp4" type="video/mp4">
+                <!-- 브라우저가 비디오를 지원하지 않을 경우 대체 텍스트 -->
+                Your browser does not support the video tag.
+              </video>
+        </div>
         <div id="button_up"><a href="#box01"><img src="img/arrow_up.png"></a></div>
     </div>
 
@@ -151,8 +157,8 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="img/캡쳐/슬라이드1.png"></div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide"><img src="img/캡쳐/슬라이드2.png"></div>
+              <div class="swiper-slide"><img src="img/캡쳐/슬라이드3.png"></div>
             </div>
         </div>
         <div id="gameIMG_text01">NPC를 통해 스토리를 풀어나가보세요</div>
@@ -208,8 +214,8 @@
         // 슬라이드 설명 배열
         const slideDescriptions = [
           "NPC를 통해 스토리를 풀어나가보세요",
-          "Slide 2 설명입니다.",
-          "Slide 3 설명입니다."
+          "주어진 정보로 그들의 서식지로 들어가세요",
+          "오염된 보스를 무찌르세요"
         ];
     
         // Swiper 초기화

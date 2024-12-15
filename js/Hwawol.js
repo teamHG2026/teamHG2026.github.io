@@ -156,10 +156,10 @@ function setupSkillListeners() {
             text02.innerHTML = `
                 <h1><span class="text002">접근 금지</span></h1>
                 <br>
-                공중에 뜬 상태에서 힘껏 내려쳐 공격한다 <br>
-                적에게 100% 피해를 입히고 3초간 <br>
-                기절시킨다 <br>
-                스킬강화 : 피해량 증가(10%, 20%, 30%)
+                공중에 뜬 상태에서 힘껏 내려쳐 <br>
+                공격한다 적에게 100% 피해를 <br>
+                입히고 3초간 기절시킨다 <br>
+                스킬강화 : 피해량 증가
             `;
         } else if (window.innerWidth <= 750) {
             text02.innerHTML = `
@@ -198,7 +198,8 @@ function setupSkillListeners() {
             text02.innerHTML = `
                 <h1><span class="text002">철갑</span></h1>
                 <br>
-                방패로 자신의 몸을 지켜 피해를 막는다
+                방패로 자신의 몸을 지켜 피해를 <br>
+                막는다
             `;
         } else if (window.innerWidth <= 750) {
             text02.innerHTML = `

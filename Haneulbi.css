@@ -905,9 +905,9 @@ a:hover {
     }
 
     #box02A{
-        width: 115px;
+        width: 100px;
         height: 15px;
-        top: 290px;
+        top: 310px;
         left: 0px;
         z-index: 10000;
     }
